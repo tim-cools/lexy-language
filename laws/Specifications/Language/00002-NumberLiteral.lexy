@@ -1,4 +1,4 @@
-Scenario: ValidNumberIntAsParameter
+Scenario: ValidNumberIntAsParameterDefault
   Function: ValidNumberIntAsParameterFunction
     Parameters
       number Value = 123
@@ -8,6 +8,19 @@ Scenario: ValidNumberIntAsParameter
       Result = Value
   Results
     Result = 123
+
+Scenario: ValidNumberIntAsParameter
+  Function: ValidNumberIntAsParameterFunction
+    Parameters
+      number Value = 123
+    Results
+      number Result
+    Code
+      Result = Value
+  Parameters
+    Value = 456
+  Results
+    Result = 456
 
 Scenario: ValidNumberDecimalAsParameter
   Function: ValidNumberDecimalAsParameterFunction

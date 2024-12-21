@@ -6,11 +6,6 @@ Function: DuplicateFunctionName
     Result = 1
 
 Function: DuplicateFunctionName
-# Validate table keywords
-  Results
-    number Result
-  Code
-    Result = 1
 
 Table: DuplicateTableName
 # Validate table keywords
@@ -19,19 +14,11 @@ Table: DuplicateTableName
   | 1 | 1 |
 
 Function: DuplicateTableName
-# Validate table keywords
-  | number Value | number Result |
-  | 0 | 0 |
-  | 1 | 1 |
 
 Enum: DuplicateEnumName
   First = 1
 
 Enum: DuplicateEnumName
-  First = 2
-
-Scenario: DuplicateScenarioName
-  ExpectRootErrors
 
 Scenario: DuplicateScenarioName
   ExpectRootErrors
@@ -40,9 +27,4 @@ Scenario: DuplicateScenarioName
     "Duplicated component name: 'DuplicateEnumName'"
     "Duplicated component name: 'DuplicateScenarioName'"
 
-Scenario: DuplicateTableNameScenario
-  ExpectRootErrors
-    "Duplicated component name: 'DuplicateTableName'"
-    "Duplicated component name: 'DuplicateFunctionName'"
-    "Duplicated component name: 'DuplicateEnumName'"
-    "Duplicated component name: 'DuplicateScenarioName'"
+Scenario: DuplicateScenarioName

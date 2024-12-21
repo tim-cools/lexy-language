@@ -1,0 +1,39 @@
+Scenario: ValidNumberBooleanDefault
+  Function: ValidNumberBooleanDefaultFunction
+    Results
+      boolean Result
+  Results
+    Result = false
+
+Scenario: ValidNumberBooleanAsParameterDefault
+  Function: ValidNumberBooleanAsParameterDefaultFunction
+    Parameters
+      boolean Value = true
+    Results
+      boolean Result
+    Code
+      Result = Value
+  Results
+    Result = true
+
+Scenario: ValidNumberBooleanAsParameter
+  Function: ValidNumberBooleanAsParameterFunction
+    Parameters
+      boolean Value = true
+    Results
+      boolean Result
+    Code
+      Result = Value
+  Parameters
+    Value = false
+  Results
+    Result = false
+
+Scenario: ValidNumberBooleanInCode
+  Function: ValidNumberBooleanInCodeFunction
+    Results
+      boolean Result
+    Code
+      Result = true
+  Results
+    Result = true

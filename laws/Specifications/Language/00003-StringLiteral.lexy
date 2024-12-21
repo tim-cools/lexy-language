@@ -1,0 +1,40 @@
+Scenario: ValidNumberStringAsParameterDefault
+  Function: ValidNumberStringAsParameterDefaultFunction
+    Parameters
+      string Value = "abc"
+    Results
+      string Result
+    Code
+      Result = Value
+  Results
+    Result = "abc"
+
+Scenario: ValidNumberStringAsParameter
+  Function: ValidNumberStringAsParameterFunction
+    Parameters
+      string Value = "abc"
+    Results
+      string Result
+    Code
+      Result = Value
+  Parameters
+    Value = "xyz"
+  Results
+    Result = "xyz"
+
+Scenario: ValidNumberStringInCode
+  Function: ValidNumberStringInCodeFunction
+    Results
+      string Result
+    Code
+      Result = "abc"
+  Results
+    Result = "abc"
+
+Scenario: InvalidNumberEndsWithLetter
+  Function: InvalidNumberEndsWithLetterFunction
+    Results
+      string Result
+    Code
+      Result = "and
+  ExpectError "Invalid token at end of line. Closing quote expected."
