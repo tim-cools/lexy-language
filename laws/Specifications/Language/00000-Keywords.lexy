@@ -38,11 +38,11 @@ Scenario: ValidateEnumKeywords
 
 
 Function: ValidateIntVariable
-# Validate int variable type
+# Validate number variable type with int
   Parameters
-    int InInt
+    number InInt
   Results
-    int OutInt
+    number OutInt
   Code
     OutInt = InInt
 
@@ -54,7 +54,7 @@ Scenario: ValidateIntVariable
     OutInt = 777
 
 Function: ValidateNumberVariable
-# Validate number variable type
+# Validate number variable type with decimal
   Parameters
     number InNumber
   Results
@@ -112,7 +112,7 @@ Scenario: UnknownFunctionKeyword
 
 Table: ValidateTableKeyword
 # Validate table keywords
-  | int Value | int Result |
+  | number Value | number Result |
   | 0 | 0 |
   | 1 | 1 |
 
@@ -122,7 +122,7 @@ Function: ValidateTableKeyword
     table ValidateTableKeyword
   Parameters
   Results
-    int Result
+    number Result
   Code
     Result = ValidateTableKeyword.Count
 
