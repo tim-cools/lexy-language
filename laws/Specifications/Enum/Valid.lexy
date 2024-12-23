@@ -1,0 +1,54 @@
+Enum: ValidEnum
+  First
+  Second
+  Third
+
+Scenario: EnumDefault
+  Function:
+    Results
+      ValidEnum Result
+  Results
+    Result = ValidEnum.First
+
+Scenario: EnumParameterDefault
+  Function:
+    Parameters
+      ValidEnum Value = ValidEnum.Second
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  Results
+    Result = ValidEnum.Second
+
+Scenario: EnumParameter
+  Function:
+    Parameters
+      ValidEnum Value = ValidEnum.Third
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  Parameters
+    Value = ValidEnum.Second
+  Results
+    Result = ValidEnum.Second
+
+Scenario: EnumInCode
+  Function:
+    Results
+      ValidEnum Result
+    Code
+      Result = ValidEnum.Second
+  Results
+    Result = ValidEnum.Second
+
+Scenario: EnumDeclarationInCode
+  Function:
+    Results
+      ValidEnum Result
+    Code
+      ValidEnum temp = ValidEnum.Second
+      Result = temp
+  Results
+    Result = ValidEnum.Second

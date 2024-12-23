@@ -4,14 +4,14 @@ Function: ValidateFunctionKeywords
   Results
   Code
 
-Scenario: ValidateScenarioKeywords
+Scenario: ateScenarioKeywords
 # Validate Scenario keywords
   Function ValidateFunctionKeywords
   Parameters
   Results
 
 
-Scenario: ValidateInlineFunctionKeywords
+Scenario: ateInlineFunctionKeywords
 # Validate Scenario keywords
   Function: ValidateFunctionKeywordsInline
   # Validate function keywords
@@ -22,7 +22,7 @@ Scenario: ValidateInlineFunctionKeywords
   Results
 
 
-Scenario: ValidateScenarioWithTableKeywords
+Scenario: ateScenarioWithTableKeywords
 # Validate Scenario with table keywords
   Function ValidateFunctionKeywords
   ValidationTable
@@ -40,7 +40,7 @@ Function: ValidateEnumKeywordFunction
   Code
     Result = Value
 
-Scenario: ValidateEnumKeywords
+Scenario: ateEnumKeywords
 # Validate enum keywords
   Function ValidateEnumKeywordFunction
   Parameters
@@ -58,7 +58,7 @@ Function: ValidateIntVariableFunction
   Code
     OutInt = InInt
 
-Scenario: ValidateIntVariable
+Scenario: ateIntVariable
   Function ValidateIntVariableFunction
   Parameters
     InInt = 777
@@ -74,7 +74,7 @@ Function: ValidateNumberVariableFunction
   Code
     OutNumber = InNumber
 
-Scenario: ValidateNumberVariable
+Scenario: ateNumberVariable
   Function ValidateNumberVariableFunction
   Parameters
     InNumber = 999
@@ -90,7 +90,7 @@ Function: ValidateBooleanVariableFunction
   Code
     OutBoolean = InBoolean
 
-Scenario: ValidateBooleanVariable
+Scenario: ateBooleanVariable
   Function ValidateBooleanVariableFunction
   Parameters
     InBoolean = true
@@ -106,7 +106,7 @@ Function: ValidateDateTimeVariableFunction
   Code
     OutDateTime = InDateTime
 
-Scenario: ValidateDateTimeVariable
+Scenario: ateDateTimeVariable
   Function ValidateDateTimeVariableFunction
   Parameters
     InDateTime = d"2022/12/16 13:26:55"
@@ -138,7 +138,7 @@ Function: ValidateTableKeywordFunction
   Code
     Result = ValidateTableKeyword.Count
 
-Scenario: ValidateTableKeywordScenario
+Scenario: ateTableKeywordScenario
   Function ValidateTableKeywordFunction
   Results
     Result = 2

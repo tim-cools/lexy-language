@@ -1,4 +1,4 @@
-Scenario: ValidNumberStringAsParameterDefault
+Scenario: NumberStringAsParameterDefault
   Function: ValidNumberStringAsParameterDefaultFunction
     Parameters
       string Value = "abc"
@@ -9,7 +9,7 @@ Scenario: ValidNumberStringAsParameterDefault
   Results
     Result = "abc"
 
-Scenario: ValidNumberStringAsParameter
+Scenario: NumberStringAsParameter
   Function: ValidNumberStringAsParameterFunction
     Parameters
       string Value = "abc"
@@ -22,7 +22,7 @@ Scenario: ValidNumberStringAsParameter
   Results
     Result = "xyz"
 
-Scenario: ValidNumberStringInCode
+Scenario: NumberStringInCode
   Function: ValidNumberStringInCodeFunction
     Results
       string Result
@@ -30,6 +30,16 @@ Scenario: ValidNumberStringInCode
       Result = "abc"
   Results
     Result = "abc"
+
+Scenario: StringVariableDeclarationInCode
+  Function: ValidNumberDecimalInCodeFunction
+    Results
+      string Result
+    Code
+      string temp = "abs"
+      Result = temp
+  Results
+    Result = "abs"
 
 Scenario: InvalidNumberEndsWithLetter
   Function: InvalidNumberEndsWithLetterFunction
@@ -47,3 +57,33 @@ Scenario: ConcatenateStringInCode
       Result = "abc" + "def"
   Results
     Result = "abcdef"
+
+Scenario: InvalidStringInitializeNumber
+  Function:
+    Parameters
+      string Value = 1
+    Results
+      string Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '1'. (type: 'string')"
+
+Scenario: InvalidStringInitializeBoolean
+  Function:
+    Parameters
+      string Value = true
+    Results
+      string Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'true'. (type: 'string')"
+
+Scenario: InvalidStringInitializeDateTime
+  Function:
+    Parameters
+      string Value = d"2024/12/23 17:51:15"
+    Results
+      string Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '2024/12/23 17:51:15'. (type: 'string')"

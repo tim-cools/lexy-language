@@ -10,8 +10,93 @@ Scenario: InvalidEnumDecimalValue
     Second = 1.1
   ExpectError "Enum member value should not be decimal: 1.1"
 
-Scenario: InvalidVEnumDuplicatedMember
+Scenario: InvalidEnumDuplicatedMember
   Enum: InvalidVEnumDuplicatedMemberEnum
     First = 0
     First = 1
   ExpectError "Enum member name should be unique. Duplicate name: 'First'"
+
+Enum: ValidEnum
+  First
+  Second
+  Third
+
+Scenario: InvalidEnumInitializeNumber
+  Function:
+    Parameters
+      ValidEnum Value = 1
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '1'. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeString
+  Function:
+    Parameters
+      ValidEnum Value = "a"
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'a'. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeBoolean
+  Function:
+    Parameters
+      ValidEnum Value = true
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'true'. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeDateTime
+  Function:
+    Parameters
+      ValidEnum Value = d"2024/12/23 17:51:15"
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '2024/12/23 17:51:15'. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeNoMember
+  Function:
+    Parameters
+      ValidEnum Value = ValidEnum
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'ValidEnum'. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeUnknownMember
+  Function:
+    Parameters
+      ValidEnum Value = ValidEnum.Fourth
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'ValidEnum.Fourth'. Invalid member. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitializeInvalidEnumType
+  Function:
+    Parameters
+      ValidEnum Value = InvalidEnum.Fourth
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'InvalidEnum.Fourth'. Invalid enum type. (type: 'ValidEnum')"
+
+Scenario: InvalidEnumInitialize
+  Function:
+    Parameters
+      ValidEnum Value = ValidEnum.Third.First
+    Results
+      ValidEnum Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'ValidEnum.Third.First'. (type: 'ValidEnum')"

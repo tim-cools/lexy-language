@@ -1,4 +1,4 @@
-Scenario: ValidNumberIntAsParameterDefault
+Scenario: NumberIntAsParameterDefault
   Function: ValidNumberIntAsParameterFunction
     Parameters
       number Value = 123
@@ -9,7 +9,7 @@ Scenario: ValidNumberIntAsParameterDefault
   Results
     Result = 123
 
-Scenario: ValidNumberIntAsParameter
+Scenario: NumberIntAsParameter
   Function: ValidNumberIntAsParameterFunction
     Parameters
       number Value = 123
@@ -22,7 +22,7 @@ Scenario: ValidNumberIntAsParameter
   Results
     Result = 456
 
-Scenario: ValidNumberDecimalAsParameter
+Scenario: NumberDecimalAsParameter
   Function: ValidNumberDecimalAsParameterFunction
     Parameters
       number Value = 123.45
@@ -33,7 +33,7 @@ Scenario: ValidNumberDecimalAsParameter
   Results
     Result = 123.45
 
-Scenario: ValidNumberIntInCode
+Scenario: NumberIntInCode
   Function: ValidNumberIntInCodeFunction
     Results
       number Result
@@ -42,12 +42,22 @@ Scenario: ValidNumberIntInCode
   Results
     Result = 123
 
-Scenario: ValidNumberDecimalInCode
+Scenario: NumberDecimalInCode
   Function: ValidNumberDecimalInCodeFunction
     Results
       number Result
     Code
       Result = 123.45
+  Results
+    Result = 123.45
+
+Scenario: NumberVariableDeclarationInCode
+  Function: ValidNumberDecimalInCodeFunction
+    Results
+      number Result
+    Code
+      number temp = 123.45
+      Result = temp
   Results
     Result = 123.45
 
@@ -59,3 +69,32 @@ Scenario: InvalidNumberEndsWithLetter
       Result = 123A
   ExpectError "Invalid token at 18: Invalid number token character: A"
 
+Scenario: InvalidNumberInitializeString
+  Function:
+    Parameters
+      number Value = "1"
+    Results
+      number Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '1'. (type: 'number')"
+
+Scenario: InvalidNumberInitializeBoolean
+  Function:
+    Parameters
+      number Value = true
+    Results
+      number Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value 'true'. (type: 'number')"
+
+Scenario: InvalidNumberInitializeDateTime
+  Function:
+    Parameters
+      number Value = d"2024/12/23 17:51:15"
+    Results
+      number Result
+    Code
+      Result = Value
+  ExpectError "Invalid default value '2024/12/23 17:51:15'. (type: 'number')"
