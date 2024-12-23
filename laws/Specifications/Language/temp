@@ -25,3 +25,14 @@ TODO
   - Failed parsing of scenario shouldn't throw exception, but log errors
   - Test expect errors and root errors
   - Scenario with a validation table
+
+
+
+System.InvalidOperationException : tests.lexy(0, 1): '  Value = ValidateEnumKeyword..Second'
+tests.lexy(0, 30): ERROR - Invalid token at 30: Unexpected character: '.'. Member accessor should be followed by member name.
+tests.lexy(0, 1):   Tokens: StringLiteralToken OperatorToken
+tests.lexy(0, 1):   Parse: KeywordTests
+tests.lexy(0, 1): ERROR - (KeywordTests) Error expected but not found: 1: ERROR - Invalid token at 30: Unexpected character: '.'. Member accessor should be followed by member name.
+
+
+

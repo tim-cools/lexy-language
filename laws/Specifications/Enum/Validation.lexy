@@ -2,7 +2,7 @@ Scenario: InvalidEnumNegativeValue
   Enum: InvalidEnumNegativeValueEnum
     First = 0
     Second = -1
-  ExpectError "4: ERROR - Invalid number of tokens: 4. Should be 1 or 3."
+  ExpectError "Validation.lexy(4, 15): ERROR - Invalid number of tokens: 4. Should be 1 or 3."
 
 Scenario: InvalidEnumDecimalValue
   Enum: InvalidEnumDecimalValueEnum
