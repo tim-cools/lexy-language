@@ -1,0 +1,17 @@
+Scenario: InvalidEnumNegativeValue
+  Enum: InvalidEnumNegativeValueEnum
+    First = 0
+    Second = -1
+  ExpectError "4: ERROR - Invalid number of tokens: 4. Should be 1 or 3."
+
+Scenario: InvalidEnumDecimalValue
+  Enum: InvalidEnumDecimalValueEnum
+    First = 0
+    Second = 1.1
+  ExpectError "Enum member value should not be decimal: 1.1"
+
+Scenario: InvalidVEnumDuplicatedMember
+  Enum: InvalidVEnumDuplicatedMemberEnum
+    First = 0
+    First = 1
+  ExpectError "Enum member name should be unique. Duplicate name: 'First'"

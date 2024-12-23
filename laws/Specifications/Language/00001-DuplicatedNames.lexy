@@ -22,9 +22,7 @@ Enum: DuplicateEnumName
 
 Scenario: DuplicateScenarioName
   ExpectRootErrors
-    "Duplicated component name: 'DuplicateTableName'"
-    "Duplicated component name: 'DuplicateFunctionName'"
-    "Duplicated component name: 'DuplicateEnumName'"
-    "Duplicated component name: 'DuplicateScenarioName'"
-
-Scenario: DuplicateScenarioName
+    "Duplicated node name: 'DuplicateTableName'"
+    "Duplicated node name: 'DuplicateFunctionName'"
+    "Duplicated node name: 'DuplicateEnumName'"
+    "Duplicated node name: 'DuplicateScenarioName'"

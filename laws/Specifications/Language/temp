@@ -23,3 +23,5 @@ TODO
     - Lexy.SpecificationsRunner
   - Failed parsing of DateTime is not an error
   - Failed parsing of scenario shouldn't throw exception, but log errors
+  - Test expect errors and root errors
+  - Scenario with a validation table
