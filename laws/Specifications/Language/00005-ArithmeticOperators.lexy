@@ -1,4 +1,4 @@
-Scenario: SimpleAddition
+Scenario: Addition
   Function:
     Results
       number Result
@@ -7,7 +7,7 @@ Scenario: SimpleAddition
   Results
     Result = 2
 
-Scenario: SimpleSubtraction
+Scenario: Subtraction
   Function:
     Results
       number Result
@@ -16,7 +16,7 @@ Scenario: SimpleSubtraction
   Results
     Result = 4
 
-Scenario: SimpleDivision
+Scenario: Division
   Function:
     Results
       number Result
@@ -25,7 +25,7 @@ Scenario: SimpleDivision
   Results
     Result = 2.5
 
-Scenario: SimpleModulo
+Scenario: Modulo
   Function:
     Results
       number Result
@@ -34,7 +34,7 @@ Scenario: SimpleModulo
   Results
     Result = 1
 
-Scenario: SimpleParenthesis
+Scenario: Parenthesis
   Function:
     Results
       number Result
@@ -43,7 +43,7 @@ Scenario: SimpleParenthesis
   Results
     Result = 14
 
-Scenario: SimpleAdditionParameters
+Scenario: AdditionParameters
   Function:
     Parameters
       number Value
@@ -56,7 +56,7 @@ Scenario: SimpleAdditionParameters
   Results
     Result = 4
 
-Scenario: SimpleSubtractionParameters
+Scenario: SubtractionParameters
   Function:
     Parameters
       number Value
@@ -69,7 +69,7 @@ Scenario: SimpleSubtractionParameters
   Results
     Result = 8
 
-Scenario: SimpleDivisionParameters
+Scenario: DivisionParameters
   Function:
     Parameters
       number Value
@@ -82,7 +82,7 @@ Scenario: SimpleDivisionParameters
   Results
     Result = 5
 
-Scenario: SimpleModuloParameters
+Scenario: ModuloParameters
   Function:
     Parameters
       number Value
@@ -95,7 +95,7 @@ Scenario: SimpleModuloParameters
   Results
     Result = 2
 
-Scenario: SimpleParenthesisParameters
+Scenario: ParenthesisParameters
   Function:
     Parameters
       number Value
@@ -107,3 +107,44 @@ Scenario: SimpleParenthesisParameters
     Value = 7
   Results
     Result = 22
+
+Scenario: NoParenthesisParameters
+  Function:
+    Parameters
+      number Value
+    Results
+      number Result
+    Code
+      Result = 2 * Value + 4
+  Parameters
+    Value = 7
+  Results
+    Result = 18
+
+Scenario: LogicalAnd
+  Function:
+    Parameters
+      boolean Value
+    Results
+      boolean Result
+    Code
+      Result = Value && true
+  Parameters
+    Value = true
+  Results
+    Result = true
+
+Scenario: Logical0r
+  Function:
+    Parameters
+      boolean Value
+    Results
+      boolean Result
+    Code
+      Result = Value || true
+  Parameters
+    Value = false
+  Results
+    Result = true
+
+# add scanarios for operation order and all kind of edge cases
