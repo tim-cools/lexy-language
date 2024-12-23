@@ -1,0 +1,35 @@
+Enum: ValidateEnumKeyword
+  First
+  Second
+
+Scenario: InvalidParameterType
+  Function:
+    Parameters
+      InvalidValidateEnumKeyword Value
+    Results
+      ValidateEnumKeyword Result
+    Code
+      Result = Value
+  ExpectError "Unknown type: 'InvalidValidateEnumKeyword'"
+
+Scenario: DuplicatedParameterName
+  Function:
+    Parameters
+      number Value
+      ValidateEnumKeyword Value
+  ExpectError "Duplicated variable name: 'Value'"
+
+Scenario: DuplicatedResultName
+  Function:
+    Parameters
+      number Value
+      ValidateEnumKeyword Value
+  ExpectError "Duplicated variable name: 'Value'"
+
+Scenario: DuplicatedParameterResultName
+  Function:
+    Parameters
+      number Value
+    Results
+      ValidateEnumKeyword Value
+  ExpectError "Duplicated variable name: 'Value'"
