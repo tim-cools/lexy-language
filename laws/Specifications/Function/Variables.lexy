@@ -1,0 +1,66 @@
+Enum: SimpleEnum
+  First
+  Next
+
+Function: RootDeclarationFunction
+  Results
+    number NumberResult
+    string StringResult
+    boolean BooleanResult
+    datetime DatetimeResult
+    SimpleEnum EnumResult
+  Code
+    number numberValue = 123
+    string stringValue = "abc"
+    boolean booleanValue = true
+    datetime datetimeValue = d"2024/12/24 13:49:00"
+    SimpleEnum enumValue = SimpleEnum.Next
+
+    NumberResult = numberValue
+    StringResult = stringValue
+    BooleanResult = booleanValue
+    DatetimeResult = datetimeValue
+    EnumResult = enumValue
+
+Scenario: RootDeclaration
+  Function RootDeclarationFunction
+  Results
+    NumberResult = 123
+    StringResult = "abc"
+    BooleanResult = true
+    DatetimeResult = d"2024/12/24 13:49:00"
+    EnumResult = SimpleEnum.Next
+
+Function: IfScopedVariablesFunction
+  Parameters
+    boolean Evil
+  Results
+    number NumberResult
+    string StringResult
+    boolean BooleanResult
+    datetime DatetimeResult
+    SimpleEnum EnumResult
+  Code
+    if Evil
+      number numberValue = 123
+      string stringValue = "abc"
+      boolean booleanValue = true
+      datetime datetimeValue = d"2024/12/24 13:49:00"
+      SimpleEnum enumValue = SimpleEnum.Next
+
+      NumberResult = numberValue
+      StringResult = stringValue
+      BooleanResult = booleanValue
+      DatetimeResult = datetimeValue
+      EnumResult = enumValue
+
+Scenario: IfScopedVariables
+  Function IfScopedVariablesFunction
+  Parameters
+    Evil = true
+  Results
+    NumberResult = 123
+    StringResult = "abc"
+    BooleanResult = true
+    DatetimeResult = d"2024/12/24 13:49:00"
+    EnumResult = SimpleEnum.Next
