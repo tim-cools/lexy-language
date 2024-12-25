@@ -241,7 +241,7 @@ Scenario: IfWithStringCalculationCondition
   Function IfWithStringCalculationConditionFunction
   ExpectError "'if' condition expression should be 'boolean', is of wrong type 'string'."
 
-Scenario: IfWithDateTimeCondition
+Scenario: IfWithDateCondition
   Function:
     Parameters
     Results
@@ -253,7 +253,7 @@ Scenario: IfWithDateTimeCondition
         temp = 777
       Number = temp
   Parameters
-  ExpectError "'if' condition expression should be 'boolean', is of wrong type 'datetime'"
+  ExpectError "'if' condition expression should be 'boolean', is of wrong type 'date'"
 
 
 Function: IfWithUnassignedLocalVariableFunction

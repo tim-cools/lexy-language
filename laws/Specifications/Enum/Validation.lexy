@@ -51,7 +51,7 @@ Scenario: InvalidEnumInitializeBoolean
       Result = Value
   ExpectError "Invalid default value 'true'. (type: 'ValidEnum')"
 
-Scenario: InvalidEnumInitializeDateTime
+Scenario: InvalidEnumInitializeDate
   Function:
     Parameters
       ValidEnum Value = d"2024/12/23 17:51:15"

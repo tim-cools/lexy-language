@@ -1,9 +1,9 @@
 Scenario: NumberStringAsParameterDefault
   Function:
     Parameters
-      datetime Value = d"2024/12/23 16:03:00"
+      date Value = d"2024/12/23 16:03:00"
     Results
-      datetime Result
+      date Result
     Code
       Result = Value
   Results
@@ -12,9 +12,9 @@ Scenario: NumberStringAsParameterDefault
 Scenario: NumberStringAsParameter
   Function:
     Parameters
-      datetime Value = d"2000/01/01 12:34:56"
+      date Value = d"2000/01/01 12:34:56"
     Results
-      datetime Result
+      date Result
     Code
       Result = Value
   Parameters
@@ -22,23 +22,23 @@ Scenario: NumberStringAsParameter
   Results
     Result = d"2024/12/23 16:03:00"
 
-Scenario: DateTimeStringInCode
+Scenario: DateStringInCode
   Function:
     Results
-      datetime Result
+      date Result
     Code
       Result = d"2024/12/23 16:03:00"
   Results
     Result = d"2024/12/23 16:03:00"
 
-Scenario: DateTimeVariableDeclarationInCode
+Scenario: DateVariableDeclarationInCode
   Function:
     Results
-      datetime Result
+      date Result
     Parameters
-      datetime Value
+      date Value
     Code
-      datetime temp
+      date temp
       temp = Value
       Result = temp
   Parameters
@@ -46,12 +46,12 @@ Scenario: DateTimeVariableDeclarationInCode
   Results
     Result = d"2024/12/23 16:03:00"
 
-Scenario: DateTimeVariableDeclarationInCodeWithDefault
+Scenario: DateVariableDeclarationInCodeWithDefault
   Function:
     Results
-      datetime Result
+      date Result
     Code
-      datetime temp =  d"2024/12/23 16:03:00"
+      date temp =  d"2024/12/23 16:03:00"
       Result = temp
   Results
     Result = d"2024/12/23 16:03:00"
@@ -59,37 +59,37 @@ Scenario: DateTimeVariableDeclarationInCodeWithDefault
 Scenario: InvalidNumberEndsWithLetter
   Function:
     Results
-      datetime Result
+      date Result
     Code
       Result = d"2024-01-23 16:3:00"
   ExpectError "Unexpected character: '-'"
 
-Scenario: InvalidDateTimeInitializeString
+Scenario: InvalidDateInitializeString
   Function:
     Parameters
-      datetime Value = "1"
+      date Value = "1"
     Results
-      datetime Result
+      date Result
     Code
       Result = Value
-  ExpectError "Invalid default value '1'. (type: 'datetime')"
+  ExpectError "Invalid default value '1'. (type: 'date')"
 
-Scenario: InvalidDateTimeInitializeNumber
+Scenario: InvalidDateInitializeNumber
   Function:
     Parameters
-      datetime Value = 5
+      date Value = 5
     Results
-      datetime Result
+      date Result
     Code
       Result = Value
-  ExpectError "Invalid default value '5'. (type: 'datetime')"
+  ExpectError "Invalid default value '5'. (type: 'date')"
 
 Scenario:
   Function:
     Parameters
-      datetime Value = true
+      date Value = true
     Results
-      datetime Result
+      date Result
     Code
       Result = Value
-  ExpectError "Invalid default value 'true'. (type: 'datetime')"
+  ExpectError "Invalid default value 'true'. (type: 'date')"

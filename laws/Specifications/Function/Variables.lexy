@@ -7,19 +7,19 @@ Function: RootDeclarationFunction
     number NumberResult
     string StringResult
     boolean BooleanResult
-    datetime DatetimeResult
+    date DatetimeResult
     SimpleEnum EnumResult
   Code
     number numberValue = 123
     string stringValue = "abc"
     boolean booleanValue = true
-    datetime datetimeValue = d"2024/12/24 13:49:00"
+    date dateValue = d"2024/12/24 13:49:00"
     SimpleEnum enumValue = SimpleEnum.Next
 
     NumberResult = numberValue
     StringResult = stringValue
     BooleanResult = booleanValue
-    DatetimeResult = datetimeValue
+    DatetimeResult = dateValue
     EnumResult = enumValue
 
 Scenario: RootDeclaration
@@ -39,13 +39,13 @@ Scenario: ResultAssignmentAndDefaultValues
       number NumberParam
       string StringParam
       boolean BooleanParam
-      datetime DatetimeParam
+      date DatetimeParam
       SimpleEnum EnumParam
     Results
       number NumberResult
       string StringResult
       boolean BooleanResult
-      datetime DatetimeResult
+      date DatetimeResult
       SimpleEnum EnumResult
     Code
       NumberResult = NumberParam
@@ -70,7 +70,7 @@ Scenario: ResultVariablesDefaultValues
       number NumberResult
       string StringResult
       boolean BooleanResult
-      datetime DatetimeResult
+      date DatetimeResult
       SimpleEnum EnumResult
   Results
     NumberResult = 0
@@ -88,19 +88,19 @@ Scenario: InCodeVariablesDefaultValues
       number NumberResult
       string StringResult
       boolean BooleanResult
-      datetime DatetimeResult
+      date DatetimeResult
       SimpleEnum EnumResult
     Code
       number numberValue
       string stringValue
       boolean booleanValue
-      datetime datetimeValue
+      date dateValue
       SimpleEnum enumValue
 
       NumberResult = numberValue
       StringResult = stringValue
       BooleanResult = booleanValue
-      DatetimeResult = datetimeValue
+      DatetimeResult = dateValue
       EnumResult = enumValue
 
   Results
@@ -118,13 +118,13 @@ Scenario: ResultAssignmentWithInitializerAndDefaultValues
       number NumberParam = 1
       string StringParam = "1"
       boolean BooleanParam = true
-      datetime DatetimeParam = d"2024/12/25 00:00:00"
+      date DatetimeParam = d"2024/12/25 00:00:00"
       SimpleEnum EnumParam = SimpleEnum.Next
     Results
       number NumberResult
       string StringResult
       boolean BooleanResult
-      datetime DatetimeResult
+      date DatetimeResult
       SimpleEnum EnumResult
     Code
       NumberResult = NumberParam
@@ -149,20 +149,20 @@ Function: ScopedVariablesFunction
     number NumberResult
     string StringResult
     boolean BooleanResult
-    datetime DatetimeResult
+    date DatetimeResult
     SimpleEnum EnumResult
   Code
     if Evil
       number numberValue = 123
       string stringValue = "abc"
       boolean booleanValue = true
-      datetime datetimeValue = d"2024/12/24 13:49:00"
+      date dateValue = d"2024/12/24 13:49:00"
       SimpleEnum enumValue = SimpleEnum.Next
 
       NumberResult = numberValue
       StringResult = stringValue
       BooleanResult = booleanValue
-      DatetimeResult = datetimeValue
+      DatetimeResult = dateValue
       EnumResult = enumValue
 
 Scenario: ScopedVariables

@@ -83,7 +83,7 @@ Scenario: InvalidBooleanInitializeNumber
       Result = Value
   ExpectError "Invalid default value '5'. (type: 'boolean')"
 
-Scenario: InvalidBooleanInitializeDateTime
+Scenario: InvalidBooleanInitializeDate
   Function:
     Parameters
       boolean Value = d"2024/12/23 17:51:15"

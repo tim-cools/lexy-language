@@ -104,7 +104,7 @@ Scenario: InvalidNumberInitializeBoolean
       Result = Value
   ExpectError "Invalid default value 'true'. (type: 'number')"
 
-Scenario: InvalidNumberInitializeDateTime
+Scenario: InvalidNumberInitializeDate
   Function:
     Parameters
       number Value = d"2024/12/23 17:51:15"
