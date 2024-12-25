@@ -31,6 +31,117 @@ Scenario: RootDeclaration
     DatetimeResult = d"2024/12/24 13:49:00"
     EnumResult = SimpleEnum.Next
 
+
+Scenario: ResultAssignmentAndDefaultValues
+# each declared parameter should have default value
+  Function:
+    Parameters
+      number NumberParam
+      string StringParam
+      boolean BooleanParam
+      datetime DatetimeParam
+      SimpleEnum EnumParam
+    Results
+      number NumberResult
+      string StringResult
+      boolean BooleanResult
+      datetime DatetimeResult
+      SimpleEnum EnumResult
+    Code
+      NumberResult = NumberParam
+      StringResult = StringParam
+      BooleanResult = BooleanParam
+      DatetimeResult = DatetimeParam
+      EnumResult = EnumParam
+
+  Results
+    NumberResult = 0
+    StringResult = ""
+    BooleanResult = false
+    DatetimeResult = d"0001/01/01 00:00:00"
+    EnumResult = SimpleEnum.First
+
+
+
+Scenario: ResultVariablesDefaultValues
+# each declared result should have default value
+  Function:
+    Results
+      number NumberResult
+      string StringResult
+      boolean BooleanResult
+      datetime DatetimeResult
+      SimpleEnum EnumResult
+  Results
+    NumberResult = 0
+    StringResult = ""
+    BooleanResult = false
+    DatetimeResult = d"0001/01/01 00:00:00"
+    EnumResult = SimpleEnum.First
+
+
+
+Scenario: InCodeVariablesDefaultValues
+# each declared variable should have default value
+  Function:
+    Results
+      number NumberResult
+      string StringResult
+      boolean BooleanResult
+      datetime DatetimeResult
+      SimpleEnum EnumResult
+    Code
+      number numberValue
+      string stringValue
+      boolean booleanValue
+      datetime datetimeValue
+      SimpleEnum enumValue
+
+      NumberResult = numberValue
+      StringResult = stringValue
+      BooleanResult = booleanValue
+      DatetimeResult = datetimeValue
+      EnumResult = enumValue
+
+  Results
+    NumberResult = 0
+    StringResult = ""
+    BooleanResult = false
+    DatetimeResult = d"0001/01/01 00:00:00"
+    EnumResult = SimpleEnum.First
+
+
+Scenario: ResultAssignmentWithInitializerAndDefaultValues
+# each declared parameter variable should an initialized value
+  Function:
+    Parameters
+      number NumberParam = 1
+      string StringParam = "1"
+      boolean BooleanParam = true
+      datetime DatetimeParam = d"2024/12/25 00:00:00"
+      SimpleEnum EnumParam = SimpleEnum.Next
+    Results
+      number NumberResult
+      string StringResult
+      boolean BooleanResult
+      datetime DatetimeResult
+      SimpleEnum EnumResult
+    Code
+      NumberResult = NumberParam
+      StringResult = StringParam
+      BooleanResult = BooleanParam
+      DatetimeResult = DatetimeParam
+      EnumResult = EnumParam
+
+  Results
+    NumberResult = 1
+    StringResult = "1"
+    BooleanResult = true
+    DatetimeResult = d"2024/12/25 00:00:00"
+    EnumResult = SimpleEnum.Next
+
+
+
 Function: ScopedVariablesFunction
   Parameters
     boolean Evil
@@ -67,6 +178,7 @@ Scenario: ScopedVariables
 
 
 Function: ScopedVariablesOutOfScopeFunction
+# it should not be possible access the value of a variable out of it's scope
   Parameters
     boolean Evil
   Results
@@ -80,3 +192,27 @@ Function: ScopedVariablesOutOfScopeFunction
 Scenario: ScopedVariablesOutOfScope
   Function ScopedVariablesOutOfScopeFunction
   ExpectError "Unknown variable name: 'numberValue'"
+
+
+Function: ScopedVariablesManyScopesFunction
+# it should be possible to declare variables with same name in different sub scopes
+  Parameters
+    boolean Evil
+  Results
+    number NumberResult
+  Code
+    switch Evil
+      case true
+        if Evil
+          number numberValue = 123
+        else
+          number numberValue = 456
+      default
+        number numberValue = 789
+
+    NumberResult = 777
+
+Scenario: ScopedVariablesManyScopes
+  Function ScopedVariablesManyScopesFunction
+  Results
+    NumberResult = 777
