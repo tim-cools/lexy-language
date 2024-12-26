@@ -1,0 +1,7 @@
+Include "CircularInclude"
+
+Function: IncludeFunction
+  Results
+    string Result
+  Code
+    Result = "should work"

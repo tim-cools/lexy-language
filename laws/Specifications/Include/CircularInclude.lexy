@@ -1,0 +1,6 @@
+Include "FunctionCircular"
+
+Scenario: ScenarioCircularReference
+  Function IncludeFunction
+  Results
+    Result = "should work"

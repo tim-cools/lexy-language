@@ -6,14 +6,12 @@ Table: StringTable
   | "d"                | 555                 | "555"               | true                  | d"2024/12/24 23:55:55"   |
 
 Function: SimpleLookUpNumberFunction
-  Include
-    table StringTable
   Parameters
     string Value
   Results
     number Result
   Code
-    Result = LOOKUP(StringTable, Value, SearchValue, ResultNumber)
+    Result = LOOKUP(StringTable, Value, StringTable.SearchValue, StringTable.ResultNumber)
 
 Scenario: SimpleLookUpNumber
   Function SimpleLookUpNumberFunction
@@ -39,14 +37,12 @@ Scenario: SimpleLookUpNumberAfterRange
 
 
 Function: SimpleLookUpStringFunction
-  Include
-    table StringTable
   Parameters
     string Value
   Results
     string Result
   Code
-    Result = LOOKUP(StringTable, Value, SearchValue, ResultString)
+    Result = LOOKUP(StringTable, Value, StringTable.SearchValue, StringTable.ResultString)
 
 Scenario: SimpleLookUpString
   Function SimpleLookUpStringFunction
@@ -58,14 +54,12 @@ Scenario: SimpleLookUpString
 
 
 Function: SimpleLookUpBooleanFunction
-  Include
-    table StringTable
   Parameters
     string Value
   Results
     boolean Result
   Code
-    Result = LOOKUP(StringTable, Value, SearchValue, ResultBoolean)
+    Result = LOOKUP(StringTable, Value, StringTable.SearchValue, StringTable.ResultBoolean)
 
 Scenario: SimpleLookUpBoolean
   Function SimpleLookUpBooleanFunction
@@ -78,14 +72,12 @@ Scenario: SimpleLookUpBoolean
 
 
 Function: SimpleLookUpDateFunction
-  Include
-    table StringTable
   Parameters
     string Value
   Results
     date Result
   Code
-    Result = LOOKUP(StringTable, Value, SearchValue, ResultDate)
+    Result = LOOKUP(StringTable, Value, StringTable.SearchValue, StringTable.ResultDate)
 
 Scenario: SimpleLookUpDate
   Function SimpleLookUpDateFunction

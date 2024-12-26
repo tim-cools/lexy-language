@@ -1,0 +1,15 @@
+Include "Enum"
+Include "Table"
+
+Function: IncludeFunction
+  Parameters
+    number NumberValue
+    IncludeEnum EnumValue
+  Results
+    number NumberResult
+    IncludeEnum EnumResult
+    string StringResult
+  Code
+    NumberResult = NumberValue
+    EnumResult = EnumValue
+    StringResult = LOOKUP(IncludeTable, NumberValue, IncludeTable.SearchValue, IncludeTable.ResultString)

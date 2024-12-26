@@ -1,0 +1,8 @@
+Include "FunctionSimple"
+
+Scenario: Simple
+  Function FunctionSimple
+  Parameters
+    Value = 3
+  Results
+    Result = 3

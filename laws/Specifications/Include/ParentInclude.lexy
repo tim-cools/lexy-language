@@ -1,0 +1,8 @@
+Include "../Function/Code"
+
+Scenario: ParentFunction
+  Function ValidFunction
+  Parameters
+    Value = 5
+  Results
+    Result = 5

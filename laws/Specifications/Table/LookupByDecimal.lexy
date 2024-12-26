@@ -6,14 +6,12 @@ Table: DecimalTable
   | 5                  | 555                 | "555"               | true                  | d"2024/12/24 23:55:55"   |
 
 Function: SimpleLookUpNumberFunction
-  Include
-    table DecimalTable
   Parameters
     number Value
   Results
     number Result
   Code
-    Result = LOOKUP(DecimalTable, Value, SearchValue, ResultNumber)
+    Result = LOOKUP(DecimalTable, Value, DecimalTable.SearchValue, DecimalTable.ResultNumber)
 
 Scenario: SimpleLookUpNumber
   Function SimpleLookUpNumberFunction
@@ -39,14 +37,12 @@ Scenario: SimpleLookUpNumberAfterRange
 
 
 Function: SimpleLookUpStringFunction
-  Include
-    table DecimalTable
   Parameters
     number Value
   Results
     string Result
   Code
-    Result = LOOKUP(DecimalTable, Value, SearchValue, ResultString)
+    Result = LOOKUP(DecimalTable, Value, DecimalTable.SearchValue, DecimalTable.ResultString)
 
 Scenario: SimpleLookUpString
   Function SimpleLookUpStringFunction
@@ -58,14 +54,12 @@ Scenario: SimpleLookUpString
 
 
 Function: SimpleLookUpBooleanFunction
-  Include
-    table DecimalTable
   Parameters
     number Value
   Results
     boolean Result
   Code
-    Result = LOOKUP(DecimalTable, Value, SearchValue, ResultBoolean)
+    Result = LOOKUP(DecimalTable, Value, DecimalTable.SearchValue, DecimalTable.ResultBoolean)
 
 Scenario: SimpleLookUpBoolean
   Function SimpleLookUpBooleanFunction
@@ -78,14 +72,12 @@ Scenario: SimpleLookUpBoolean
 
 
 Function: SimpleLookUpDateFunction
-  Include
-    table DecimalTable
   Parameters
     number Value
   Results
     date Result
   Code
-    Result = LOOKUP(DecimalTable, Value, SearchValue, ResultDate)
+    Result = LOOKUP(DecimalTable, Value, DecimalTable.SearchValue, DecimalTable.ResultDate)
 
 Scenario: SimpleLookUpDate
   Function SimpleLookUpDateFunction

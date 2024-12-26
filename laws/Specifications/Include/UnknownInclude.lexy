@@ -1,0 +1,5 @@
+Include "FunctionUnknown"
+
+Scenario: UnknownInclude
+  ExpectRootErrors
+    "Invalid include file name 'FunctionUnknown'"

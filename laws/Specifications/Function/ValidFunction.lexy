@@ -1,0 +1,7 @@
+Function: ValidFunction
+  Parameters
+    number Value
+  Results
+    number Result
+  Code
+    Result = Value

@@ -1,0 +1,9 @@
+Include "Function"
+
+Scenario: NestedIncludes
+  Function IncludeFunction
+  Parameters
+    NumberValue = 3
+    EnumValue = IncludeEnum.Second
+  Results
+    StringResult = "333"
