@@ -1,0 +1,21 @@
+Type: NestedType
+  number NumberValue
+  string StringValue
+  date DateValue
+  boolean BooleanValue
+  CustomType Custom
+
+Type: CustomType
+  number NumberValue
+  string StringValue
+  date DateValue
+  boolean BooleanValue
+  NestedType Nested
+
+Scenario: ScenarioCircularReference
+  Function:
+    Code
+      CustomType invalidType
+  ExpectRootErrors
+    "Circular reference detected in: 'NestedType'"
+    "Circular reference detected in: 'CustomType'"

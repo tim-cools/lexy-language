@@ -4,7 +4,7 @@ Scenario: UnknownType
       int Value
     Results
     Code
-  ExpectError "Unknown enum type: 'int'"
+  ExpectError "Unknown type: 'int'"
 
 Scenario: InvalidVariableDefaultValue
   Function:

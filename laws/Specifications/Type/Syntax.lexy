@@ -1,0 +1,37 @@
+Enum: CustomEnum
+  First
+  Second
+
+Type: NestedType
+  number InnerNumber
+  string InnerString
+  date InnerDate
+  boolean InnerBoolean
+  CustomEnum InnerEnum
+
+Type: CustomType
+  number NumberValue
+  string StringValue
+  date DateValue
+  boolean BooleanValue
+  CustomEnum EnumValue
+  NestedType Complex
+
+
+Scenario: FieldShouldHaveDefaultValue
+  Function:
+    Parameters
+      CustomEnum Enum
+    Results
+      CustomType Result
+  Results
+    Result.NumberValue = 0
+    Result.StringValue = ""
+    Result.DateValue = d"0001/01/01 00:00:00"
+    Result.BooleanValue = false
+    Result.EnumValue = CustomEnum.First
+    Result.Complex.InnerNumber = 0
+    Result.Complex.InnerString = ""
+    Result.Complex.InnerDate = d"0001/01/01 00:00:00"
+    Result.Complex.InnerBoolean = false
+    Result.Complex.InnerEnum = CustomEnum.First
