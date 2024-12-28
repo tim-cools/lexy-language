@@ -17,8 +17,7 @@ Type: CustomType
   CustomEnum EnumValue
   NestedType Complex
 
-
-Scenario: FieldShouldHaveDefaultValue
+Scenario: FieldsShouldHaveDefaultValue
   Function:
     Parameters
       CustomEnum Enum
@@ -35,3 +34,21 @@ Scenario: FieldShouldHaveDefaultValue
     Result.Complex.InnerDate = d"0001/01/01 00:00:00"
     Result.Complex.InnerBoolean = false
     Result.Complex.InnerEnum = CustomEnum.First
+
+Scenario: NestedFieldsShouldBeAssignableAndReadable
+  Function:
+    Parameters
+    Results
+      CustomType Result
+      number Value1
+      number Value2
+    Code
+      Result.NumberValue = 9
+      Result.Complex.InnerNumber = 8
+      Value1 = Result.NumberValue
+      Value2 = Result.Complex.InnerNumber
+  Results
+    Result.NumberValue = 9
+    Result.Complex.InnerNumber = 8
+    Value1 = 9
+    Value2 = 8
