@@ -86,7 +86,7 @@ Scenario: InvalidBooleanInitializeNumber
 Scenario: InvalidBooleanInitializeDate
   Function:
     Parameters
-      boolean Value = d"2024/12/23 17:51:15"
+      boolean Value = d"2024-12-23T17:51:15"
     Results
       boolean Result
     Code

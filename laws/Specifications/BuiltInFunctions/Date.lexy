@@ -1,7 +1,7 @@
 Scenario: Year
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -12,7 +12,7 @@ Scenario: Year
 Scenario: Day
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -23,7 +23,7 @@ Scenario: Day
 Scenario: Month
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -34,7 +34,7 @@ Scenario: Month
 Scenario: Hour
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -45,7 +45,7 @@ Scenario: Hour
 Scenario: Minute
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -56,7 +56,7 @@ Scenario: Minute
 Scenario: Second
   Function:
     Parameters
-      date Value = d"2024/12/25 16:57:45"
+      date Value = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -69,8 +69,8 @@ Scenario: Second
 Scenario: Years
   Function:
     Parameters
-      date ValueEnd = d"2029/12/25 16:57:45"
-      date ValueStart = d"2024/12/20 16:57:45"
+      date ValueEnd = d"2029-12-25T16:57:45"
+      date ValueStart = d"2024-12-20T16:57:45"
     Results
       number Result
     Code
@@ -81,8 +81,8 @@ Scenario: Years
 Scenario: Months
   Function:
     Parameters
-      date ValueEnd = d"2024/12/25 16:57:45"
-      date ValueStart = d"2024/08/20 16:57:45"
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-08-20T16:57:45"
     Results
       number Result
     Code
@@ -93,8 +93,8 @@ Scenario: Months
 Scenario: Days
   Function:
     Parameters
-      date ValueEnd = d"2024/12/25 16:57:45"
-      date ValueStart = d"2024/12/20 16:57:45"
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-20T16:57:45"
     Results
       number Result
     Code
@@ -105,8 +105,8 @@ Scenario: Days
 Scenario: Hours
   Function:
     Parameters
-      date ValueEnd = d"2024/12/25 16:57:45"
-      date ValueStart = d"2024/12/25 18:57:45"
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-25T18:57:45"
     Results
       number Result
     Code
@@ -117,8 +117,8 @@ Scenario: Hours
 Scenario: Minutes
   Function:
     Parameters
-      date ValueEnd = d"2024/12/25 16:57:45"
-      date ValueStart = d"2024/12/20 16:27:45"
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-20T16:27:45"
     Results
       number Result
     Code
@@ -129,8 +129,8 @@ Scenario: Minutes
 Scenario: Seconds
   Function:
     Parameters
-      date ValueEnd = d"2024/12/25 16:57:45"
-      date ValueStart = d"2024/12/20 16:57:10"
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-20T16:57:10"
     Results
       number Result
     Code

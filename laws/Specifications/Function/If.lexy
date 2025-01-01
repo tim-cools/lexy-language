@@ -248,7 +248,7 @@ Scenario: IfWithDateCondition
       number Number
     Code
       number temp
-      if d"2024/12/24 09:05:10"
+      if d"2024-12-24T09:05:10"
       else
         temp = 777
       Number = temp

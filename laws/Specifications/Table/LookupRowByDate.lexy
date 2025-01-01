@@ -1,9 +1,9 @@
 Table: DateTable
   | date SearchValue       | number ResultNumber | string ResultString | boolean ResultBoolean | date ResultDate          |
-  | d"2024/12/25 11:11:11" | 222                 | "222"               | false                 | d"2024/12/24 23:22:22"   |
-  | d"2024/12/25 11:22:22" | 333                 | "333"               | true                  | d"2024/12/24 23:33:33"   |
-  | d"2024/12/25 11:33:33" | 444                 | "444"               | false                 | d"2024/12/24 23:44:44"   |
-  | d"2024/12/25 11:44:44" | 555                 | "555"               | true                  | d"2024/12/24 23:55:55"   |
+  | d"2024-12-25T11:11:11" | 222                 | "222"               | false                 | d"2024-12-24T23:22:22"   |
+  | d"2024-12-25T11:22:22" | 333                 | "333"               | true                  | d"2024-12-24T23:33:33"   |
+  | d"2024-12-25T11:33:33" | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
+  | d"2024-12-25T11:44:44" | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
 Function: SimpleLookUpNumberFunction
   Parameters
@@ -17,21 +17,21 @@ Function: SimpleLookUpNumberFunction
 Scenario: LookUpNumber
   Function SimpleLookUpNumberFunction
   Parameters
-    Value = d"2024/12/25 11:22:22"
+    Value = d"2024-12-25T11:22:22"
   Results
     Result = 333
 
 Scenario: LookUpNumberWithDecimal
   Function SimpleLookUpNumberFunction
   Parameters
-    Value = d"2024/12/25 11:36:33"
+    Value = d"2024-12-25T11:36:33"
   Results
     Result = 444
 
 Scenario: LookUpNumberAfterRange
   Function SimpleLookUpNumberFunction
   Parameters
-    Value = d"2024/12/25 11:55:55"
+    Value = d"2024-12-25T11:55:55"
   Results
     Result = 555
 
@@ -49,7 +49,7 @@ Function: SimpleLookUpStringFunction
 Scenario: LookUpString
   Function SimpleLookUpStringFunction
   Parameters
-    Value = d"2024/12/25 11:22:22"
+    Value = d"2024-12-25T11:22:22"
   Results
     Result = "333"
 
@@ -67,7 +67,7 @@ Function: SimpleLookUpBooleanFunction
 Scenario: LookUpBoolean
   Function SimpleLookUpBooleanFunction
   Parameters
-    Value = d"2024/12/25 11:22:22"
+    Value = d"2024-12-25T11:22:22"
   Results
     Result = true
 
@@ -86,7 +86,7 @@ Function: SimpleLookUpDateFunction
 Scenario: LookUpDate
   Function SimpleLookUpDateFunction
   Parameters
-    Value = d"2024/12/25 11:22:22"
+    Value = d"2024-12-25T11:22:22"
   Results
-    Result = d"2024/12/24 23:33:33"
+    Result = d"2024-12-24T23:33:33"
 

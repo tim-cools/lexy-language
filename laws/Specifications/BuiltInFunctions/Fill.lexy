@@ -69,13 +69,13 @@ Scenario: FillMultipleParameters
     NumberValue = 5
     StringValue = "abc"
     BooleanValueOther = true
-    DateValueOther = d"2024/12/27 14:39:45"
+    DateValueOther = d"2024-12-27T14:39:45"
     EnumValueOther = SimpleEnum.Next
   Results
     NumberResult = 5
     StringResult = "abc"
     BooleanResult = false                    #not mapped
-    DateResult = d"0001/01/01 00:00:00"  #not mapped
+    DateResult = d"0001-01-01T00:00:00"  #not mapped
     EnumResult = SimpleEnum.First            #not mapped
 
 

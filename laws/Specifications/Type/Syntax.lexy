@@ -26,12 +26,12 @@ Scenario: FieldsShouldHaveDefaultValue
   Results
     Result.NumberValue = 0
     Result.StringValue = ""
-    Result.DateValue = d"0001/01/01 00:00:00"
+    Result.DateValue = d"0001-01-01T00:00:00"
     Result.BooleanValue = false
     Result.EnumValue = CustomEnum.First
     Result.Complex.InnerNumber = 0
     Result.Complex.InnerString = ""
-    Result.Complex.InnerDate = d"0001/01/01 00:00:00"
+    Result.Complex.InnerDate = d"0001-01-01T00:00:00"
     Result.Complex.InnerBoolean = false
     Result.Complex.InnerEnum = CustomEnum.First
 

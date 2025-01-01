@@ -107,7 +107,7 @@ Scenario: InvalidNumberInitializeBoolean
 Scenario: InvalidNumberInitializeDate
   Function:
     Parameters
-      number Value = d"2024/12/23 17:51:15"
+      number Value = d"2024-12-23T17:51:15"
     Results
       number Result
     Code

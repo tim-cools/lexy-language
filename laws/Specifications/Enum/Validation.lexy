@@ -54,7 +54,7 @@ Scenario: InvalidEnumInitializeBoolean
 Scenario: InvalidEnumInitializeDate
   Function:
     Parameters
-      ValidEnum Value = d"2024/12/23 17:51:15"
+      ValidEnum Value = d"2024-12-23T17:51:15"
     Results
       ValidEnum Result
     Code

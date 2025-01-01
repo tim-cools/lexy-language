@@ -96,7 +96,7 @@ Scenario: InvalidStringInitializeBoolean
 Scenario: InvalidStringInitializeDate
   Function:
     Parameters
-      string Value = d"2024/12/23 17:51:15"
+      string Value = d"2024-12-23T17:51:15"
     Results
       string Result
     Code

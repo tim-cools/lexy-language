@@ -1,35 +1,35 @@
 Scenario: NumberStringAsParameterDefault
   Function:
     Parameters
-      date Value = d"2024/12/23 16:03:00"
+      date Value = d"2024-12-23T16:03:00"
     Results
       date Result
     Code
       Result = Value
   Results
-    Result = d"2024/12/23 16:03:00"
+    Result = d"2024-12-23T16:03:00"
 
 Scenario: NumberStringAsParameter
   Function:
     Parameters
-      date Value = d"2000/01/01 12:34:56"
+      date Value = d"2000-01-01T12:34:56"
     Results
       date Result
     Code
       Result = Value
   Parameters
-    Value = d"2024/12/23 16:03:00"
+    Value = d"2024-12-23T16:03:00"
   Results
-    Result = d"2024/12/23 16:03:00"
+    Result = d"2024-12-23T16:03:00"
 
 Scenario: DateStringInCode
   Function:
     Results
       date Result
     Code
-      Result = d"2024/12/23 16:03:00"
+      Result = d"2024-12-23T16:03:00"
   Results
-    Result = d"2024/12/23 16:03:00"
+    Result = d"2024-12-23T16:03:00"
 
 Scenario: DateVariableDeclarationInCode
   Function:
@@ -42,19 +42,19 @@ Scenario: DateVariableDeclarationInCode
       temp = Value
       Result = temp
   Parameters
-    Value =      d"2024/12/23 16:03:00"
+    Value =      d"2024-12-23T16:03:00"
   Results
-    Result = d"2024/12/23 16:03:00"
+    Result = d"2024-12-23T16:03:00"
 
 Scenario: DateVariableDeclarationInCodeWithDefault
   Function:
     Results
       date Result
     Code
-      date temp =  d"2024/12/23 16:03:00"
+      date temp =  d"2024-12-23T16:03:00"
       Result = temp
   Results
-    Result = d"2024/12/23 16:03:00"
+    Result = d"2024-12-23T16:03:00"
 
 Scenario: InvalidNumberEndsWithLetter
   Function:

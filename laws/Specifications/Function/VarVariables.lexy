@@ -14,7 +14,7 @@ Scenario: VarVariableDeclarations
       var numberTemp = 777
       var stringTemp = "888"
       var booleanTemp = true
-      var dateTemp = d"2024/12/26 14:10:20"
+      var dateTemp = d"2024-12-26T14:10:20"
       var enumTemp = SimpleEnum.Next
       ResultNumber = numberTemp
       ResultString = stringTemp
@@ -25,7 +25,7 @@ Scenario: VarVariableDeclarations
     ResultNumber = 777
     ResultString = "888"
     ResultBoolean = true
-    ResultDate = d"2024/12/26 14:10:20"
+    ResultDate = d"2024-12-26T14:10:20"
     ResultEnum = SimpleEnum.Next
 
 Scenario: VarVariableDeclarationNumber

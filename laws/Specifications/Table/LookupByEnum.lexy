@@ -8,10 +8,10 @@ Enum: TableEnum
 
 Table: StringTable
   | TableEnum SearchValue | number ResultNumber | string ResultString | boolean ResultBoolean | date ResultDate          |
-  | TableEnum.A           | 222                 | "222"               | false                 | d"2024/12/24 23:22:22"   |
-  | TableEnum.B           | 333                 | "333"               | true                  | d"2024/12/24 23:33:33"   |
-  | TableEnum.C           | 444                 | "444"               | false                 | d"2024/12/24 23:44:44"   |
-  | TableEnum.D           | 555                 | "555"               | true                  | d"2024/12/24 23:55:55"   |
+  | TableEnum.A           | 222                 | "222"               | false                 | d"2024-12-24T23:22:22"   |
+  | TableEnum.B           | 333                 | "333"               | true                  | d"2024-12-24T23:33:33"   |
+  | TableEnum.C           | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
+  | TableEnum.D           | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
 Function: SimpleLookUpNumberFunction
   Parameters
@@ -92,5 +92,5 @@ Scenario: LookUpDate
   Parameters
     Value = TableEnum.B
   Results
-    Result = d"2024/12/24 23:33:33"
+    Result = d"2024-12-24T23:33:33"
 
