@@ -1,1 +1,4 @@
 - support dates without T
+- support identifiers with numbers and _
+- remove name value objects?
+- typescript/c# private vars with _
