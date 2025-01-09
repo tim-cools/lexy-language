@@ -34,7 +34,7 @@ Scenario: ExtractNoParameters
     Parameters
     Results
     Code
-      var parameters = new(SimpleTarget.Parameters)
+      SimpleTarget.Parameters parameters
       extract(parameters)
   ExpectError "Invalid parameter mapping. No parameter could be mapped from variables."
 
@@ -45,7 +45,7 @@ Scenario: ExtractSingleParameters
     Results
       number NumberResult
     Code
-      var parameters = new(SimpleTarget.Results)
+      SimpleTarget.Results parameters
       parameters.NumberResult = NumberValue
       extract(parameters)
   Parameters
@@ -69,7 +69,7 @@ Scenario: ExtractMultipleParameters
       date DateResultOther          #not mapped
       SimpleEnum EnumResultOther    #not mapped
     Code
-      var parameters = new(SimpleTarget.Results)
+      SimpleTarget.Results parameters
       parameters.NumberResult = NumberValue
       parameters.StringResult = StringValue
       parameters.BooleanResult = BooleanValue
@@ -102,7 +102,7 @@ Scenario: ExtractInIfScopeParameters
     Code
       if Evil
         number NumberResult
-        var parameters = new(SimpleTarget.Results)
+        SimpleTarget.Results parameters
         parameters.NumberResult = NumberValue
         extract(parameters)
         NumberResultParent = NumberResult
@@ -122,6 +122,6 @@ Scenario: ExtractMultipleParametersInvalidType
     Results
       number NumberResult
     Code
-      var parameters = new(SimpleTarget.Results)
+      SimpleTarget.Results parameters
       parameters.NumberResult = BooleanValue
   ExpectError "Variable 'parameters.NumberResult' of type 'number' is not assignable from expression of type 'boolean'."

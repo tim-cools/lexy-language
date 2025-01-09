@@ -1,12 +1,15 @@
-Scenario: ElseWithoutIf
-  Function:
-    Parameters
-    Results
-      number Number
-    Code
-      number temp
-      else
-        temp = 777
-      Number = temp
+Function: ScopedVariablesOutOfScopeFunction
+# it should not be possible access the value of a variable out of it's scope
   Parameters
-  ExpectError "Else should be following an If statement. No if statement found."
+    boolean Evil
+  Results
+    number NumberResult
+  Code
+    if Evil
+      number numberValue = 123
+
+    NumberResult = numberValue
+
+Scenario: ScopedVariablesOutOfScope
+  Function ScopedVariablesOutOfScopeFunction
+  ExpectError "Unknown variable name: 'numberValue'"

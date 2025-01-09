@@ -10,7 +10,7 @@ Scenario: NewTableRow
     Results
       string StringResult
     Code
-      var row = new(StringTable.Row)
+      StringTable.Row row
       StringResult = row.SearchValue
   Results
     StringResult = ""
@@ -30,17 +30,49 @@ Scenario: NewFunctionParameters
     Results
       string StringResult
     Code
-      var row = new(SimpleTarget.Parameters)
+      SimpleTarget.Parameters row
       StringResult = row.StringValue
   Results
     StringResult = "333"
+
+Type: CustomType
+  number NumberValue = 123
+  string StringValue = "abc"
+
+Scenario: NewCustomType
+  Function:
+    Results
+      string StringResult
+      number NumberResult
+    Code
+      CustomType type
+      NumberResult = type.NumberValue
+      StringResult = type.StringValue
+  Results
+    StringResult = "abc"
+    NumberResult = 123
+
+Scenario: NewCustomTypeAssign
+  Function:
+    Results
+      string StringResult
+      number NumberResult
+    Code
+      CustomType type
+      type.NumberValue = 456
+      type.StringValue = "def"
+      NumberResult = type.NumberValue
+      StringResult = type.StringValue
+  Results
+    StringResult = "def"
+    NumberResult = 456
 
 Scenario: NewFunctionParametersInvalidMember
   Function:
     Results
       string StringResult
     Code
-      var row = new(SimpleTarget.Parameters)
+      SimpleTarget.Parameters row
       StringResult = row.ResultNumber
   ExpectError "Invalid member access 'row.ResultNumber'. Variable 'row.ResultNumber' not found."
 
@@ -59,6 +91,7 @@ Scenario: NewFunctionResultsInvalidMember
     Results
       number NumberResult
     Code
-      var row = new(SimpleTarget.Results)
+      SimpleTarget.Results row
       NumberResult = row.ResultNumber
   ExpectError "Invalid member access 'row.ResultNumber'. Variable 'row.ResultNumber' not found."
+

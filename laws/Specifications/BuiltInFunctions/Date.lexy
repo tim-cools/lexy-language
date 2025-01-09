@@ -105,8 +105,8 @@ Scenario: Days
 Scenario: Hours
   Function:
     Parameters
-      date ValueEnd = d"2024-12-25T16:57:45"
-      date ValueStart = d"2024-12-25T18:57:45"
+      date ValueEnd = d"2024-12-25T18:57:45"
+      date ValueStart = d"2024-12-25T16:57:45"
     Results
       number Result
     Code
@@ -118,7 +118,7 @@ Scenario: Minutes
   Function:
     Parameters
       date ValueEnd = d"2024-12-25T16:57:45"
-      date ValueStart = d"2024-12-20T16:27:45"
+      date ValueStart = d"2024-12-25T16:27:45"
     Results
       number Result
     Code
@@ -130,7 +130,7 @@ Scenario: Seconds
   Function:
     Parameters
       date ValueEnd = d"2024-12-25T16:57:45"
-      date ValueStart = d"2024-12-20T16:57:10"
+      date ValueStart = d"2024-12-25T16:57:10"
     Results
       number Result
     Code
@@ -138,7 +138,41 @@ Scenario: Seconds
   Results
     Result = 35
 
+Scenario: HoursFullDay
+  Function:
+    Parameters
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-24T16:57:45"
+    Results
+      number Result
+    Code
+      Result = HOURS(ValueEnd, ValueStart)
+  Results
+    Result = 24
 
+Scenario: MinutesFullDay
+  Function:
+    Parameters
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-24T16:57:45"
+    Results
+      number Result
+    Code
+      Result = MINUTES(ValueEnd, ValueStart)
+  Results
+    Result = 1440
+
+Scenario: SecondsFullDay
+  Function:
+    Parameters
+      date ValueEnd = d"2024-12-25T16:57:45"
+      date ValueStart = d"2024-12-24T16:57:45"
+    Results
+      number Result
+    Code
+      Result = SECONDS(ValueEnd, ValueStart)
+  Results
+    Result = 86400
 
 Scenario: Today
   Function:
@@ -158,6 +192,6 @@ Scenario: NowAndDiff
     Code
       date first = NOW()
       date second = NOW()
-      Diff = INT(SECONDS(first, second))
+      Diff = INT(SECONDS(second, first))
   Results
     Diff = 0

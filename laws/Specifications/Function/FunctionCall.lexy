@@ -13,7 +13,7 @@ Scenario: CallSimpleFunctionNewParameters
     Results
       number Result
     Code
-      var parameters = new(SimpleFunction.Parameters)
+      SimpleFunction.Parameters parameters
       parameters.Value = Value
       var results = SimpleFunction(parameters)
       Result = results.Result
