@@ -8,4 +8,4 @@ Scenario: NestedParametersShouldBeAssignableAndReadable
     Code
       Value1 = Result.NumberValue
       Value2 = Result.Complex.InnerNumber
-  ExpectError "Invalid type 'CustomType' for Parameters variable 'Result'"
+  ExpectError "Unknown type: 'CustomType'"
