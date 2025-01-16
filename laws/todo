@@ -9,3 +9,51 @@ Add table validation
 - invalid number of values
 - TEST: multiple lookup calls with same signature
 - ScenarioRunner.setParameter > check inner property types
+
+
+
+- Synchronisation error when removing old log files: Move remove to beforeAll
+
+Summary of all failing tests
+ FAIL  tests/parser/parseScenario.test.ts (7.23 s)
+  ● ParseScenarioTests › testValidScenarioKeyword
+
+    ENOENT: no such file or directory, unlink '/Users/timcools/_/Lexy/git/typescipt/tests/logs/20250114190540-lexy-parser.log'
+
+      148 |       const hours = Math.abs(now - dateValue) / 36e5;
+      149 |       if (hours > 1) {
+    > 150 |         fs.unlinkSync(logFile);
+          |            ^
+      151 |       }
+      152 |     }
+      153 |   }
+
+      at Function.unlinkSync [as removeOldFiles] (tests/loggingConfiguration.ts:150:12)
+      at Function.removeOldFiles [as configure] (tests/loggingConfiguration.ts:63:26)
+      at Function.configure [as getParserLogger] (tests/loggingConfiguration.ts:69:26)
+      at getParserLogger (tests/parseFunctions.ts:16:39)
+      at createParser (tests/parseFunctions.ts:24:18)
+      at parseNodes (tests/parseFunctions.ts:54:27)
+      at parseNode (tests/parseFunctions.ts:42:28)
+      at Object.<anonymous> (tests/parser/parseScenario.test.ts:13:35)
+
+  ● ParseScenarioTests › testValidScenario
+
+    ENOENT: no such file or directory, unlink '/Users/timcools/_/Lexy/git/typescipt/tests/logs/20250114192455-lexy-parser.log'
+
+      148 |       const hours = Math.abs(now - dateValue) / 36e5;
+      149 |       if (hours > 1) {
+    > 150 |         fs.unlinkSync(logFile);
+          |            ^
+      151 |       }
+      152 |     }
+      153 |   }
+
+      at Function.unlinkSync [as removeOldFiles] (tests/loggingConfiguration.ts:150:12)
+      at Function.removeOldFiles [as configure] (tests/loggingConfiguration.ts:63:26)
+      at Function.configure [as getParserLogger] (tests/loggingConfiguration.ts:69:26)
+      at getParserLogger (tests/parseFunctions.ts:16:39)
+      at createParser (tests/parseFunctions.ts:24:18)
+      at parseNodes (tests/parseFunctions.ts:54:27)
+      at parseNode (tests/parseFunctions.ts:42:28)
+      at Object.<anonymous> (tests/parser/parseScenario.test.ts:26:35)
