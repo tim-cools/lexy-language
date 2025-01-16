@@ -9,6 +9,7 @@ Add table validation
 - invalid number of values
 - TEST: multiple lookup calls with same signature
 - ScenarioRunner.setParameter > check inner property types
+- Scenario TABLSE
 
 
 
