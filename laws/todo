@@ -9,7 +9,8 @@ Add table validation
 - invalid number of values
 - TEST: multiple lookup calls with same signature
 - ScenarioRunner.setParameter > check inner property types
-- Scenario TABLSE
+- Scenario TABLE for values
+- Refactor built in funciton scenarios so that the functions take values as parameters instead of default so it can be executed in UI
 
 
 
