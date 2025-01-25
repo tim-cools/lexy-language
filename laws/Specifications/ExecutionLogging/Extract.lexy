@@ -1,0 +1,73 @@
+Enum: SimpleEnum
+  First
+  Next
+
+Function: SimpleTarget
+  Parameters
+    number NumberValue
+    string StringValue
+    boolean BooleanValue
+    date DateValue
+    SimpleEnum EnumValue
+  Results
+    number NumberResult
+    string StringResult
+    boolean BooleanResult
+    date DateResult
+    SimpleEnum EnumResult
+  Code
+    NumberResult = NumberValue
+    StringResult = StringValue
+    BooleanResult = BooleanValue
+    EnumResult = EnumValue
+
+Scenario: ExtractInIfScopeParameters
+  Function:
+    Parameters
+      boolean Evil
+      number NumberValue
+    Results
+      number NumberResultParent
+    Code
+      if Evil
+        number NumberResult
+        SimpleTarget.Results parameters
+        parameters.NumberResult = NumberValue
+        extract(parameters)
+        NumberResultParent = NumberResult
+  Parameters
+    NumberValue = 5
+    Evil = true
+  Results
+    NumberResultParent = 5
+  ExecutionLogging
+    Log "Execute: ExtractInIfScopeParametersFunction"
+      Log "Parameters"
+        NumberValue = 5
+        Evil = true
+      Log "  if Evil"
+        Log "    number NumberResult"
+          NumberResult = 0
+        Log "    SimpleTarget.Results parameters"
+          parameters =
+            NumberResult = 0
+            StringResult = ""
+            BooleanResult = false
+            DateResult = d"0001-01-01T00:00:00"
+            EnumResult = SimpleEnum.First
+        Log "    parameters.NumberResult = NumberValue"
+          NumberValue = 5
+          parameters.NumberResult = 5
+        Log "    extract(parameters)"
+          parameters =
+            NumberResult = 5
+            StringResult = ""
+            BooleanResult = false
+            DateResult = d"0001-01-01T00:00:00"
+            EnumResult = SimpleEnum.First
+          NumberResult = 5
+        Log "    NumberResultParent = NumberResult"
+          NumberResult = 5
+          NumberResultParent = 5
+      Log "Results"
+        NumberResultParent = 5

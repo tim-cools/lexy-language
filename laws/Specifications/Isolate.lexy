@@ -1,20 +1,18 @@
-Enum: SimpleEnum
-  First
-  Next
-  Last
-
-Function: NoParameterDefaultValues
+Function: SimpleTarget
   Parameters
-    SimpleEnum EnumValue
+    string StringValue = "333"
   Results
-    SimpleEnum EnumResult
+    number NumberResult
+    string StringResult
   Code
-    EnumResult = EnumValue
-    EnumResult = SimpleEnum.Next
+    NumberResult = 666
+    StringResult = StringValue
 
-Scenario: ValidationSuccessful
-  Function NoParameterDefaultValues
-  Parameters
-    EnumValue = SimpleEnum.Last
-  Results
-    EnumResult = SimpleEnum.Next
+Scenario: NewFunctionParametersInvalidMember
+  Function:
+    Results
+      string StringResult
+    Code
+      var row = new(SimpleTarget.Parameters)
+      StringResult = row.ResultNumber
+  ExpectError "Unknown variable name: 'row.ResultNumber'"

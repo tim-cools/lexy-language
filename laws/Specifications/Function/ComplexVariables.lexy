@@ -1,0 +1,76 @@
+Table: SimpleTable
+  | number Search | number Value | string Extra |
+  | 0 | 05 | "ext" |
+  | 1 | 10 | "ra"  |
+
+Function: TableRowAsResultsFunction
+  Parameters
+  Results
+    SimpleTable.Row Result
+  Code
+    Result = LOOKUPROW(SimpleTable, 2, SimpleTable.Search)
+
+Scenario: UseTableRowAsResults
+  Function TableRowAsResultsFunction
+  Results
+    Result =
+      Search = 1
+      Value = 10
+      Extra = "ra"
+
+
+Function: SimpleFunction
+  Parameters
+    string ValueString
+  Results
+    string ResultString
+  Code
+
+Scenario: FunctionParametersAsResults
+  Function:
+    Parameters
+    Results
+      SimpleFunction.Parameters Result
+    Code
+      Result.ValueString = "abc"
+  Results
+    Result.ValueString = "abc"
+
+Scenario: FunctionResultsAsResults
+  Function:
+    Parameters
+    Results
+      SimpleFunction.Results Result
+    Code
+      Result.ResultString = "abc"
+  Results
+    Result.ResultString = "abc"
+
+
+Scenario: FunctionParametersAsParameters
+  Function:
+    Parameters
+      SimpleFunction.Parameters Values
+    Results
+      string Result
+    Code
+      Result = Values.ValueString
+      Values.ValueString = Result
+  Parameters
+    Values.ValueString = "abc"
+  Results
+    Result = "abc"
+
+Scenario: FunctionResultsAsParameters
+  Function:
+    Parameters
+      SimpleFunction.Results Values
+    Results
+      string Result
+    Code
+      Result = Values.ResultString
+      Values.ResultString = Result
+  Parameters
+    Values.ResultString = "abc"
+  Results
+    Result = "abc"

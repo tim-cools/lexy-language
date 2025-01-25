@@ -115,7 +115,6 @@ Scenario: ExtractInIfScopeParameters
 
 
 Scenario: ExtractMultipleParametersInvalidType
-# only corresponding parameters should be mapped
   Function:
     Parameters
       boolean BooleanValue

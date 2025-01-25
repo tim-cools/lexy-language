@@ -7,11 +7,11 @@ Scenario: SimpleFunctionCall
     Code
       Result = YEAR(Value)
   ExecutionLogging
-    Log: Parameters
-      Value = d"2024-12-25T16:57:45"
-    Log: Execute: SimpleFunctionCallFunctions
-      Log: Result = YEAR(Value)
+    Log "Execute: SimpleFunctionCallFunction"
+      Log "Parameters"
+        Value = d"2024-12-25T16:57:45"
+      Log "  Result = YEAR(Value)"
         Value = d"2024-12-25T16:57:45"
         Result = 2024
-    Log: Results
-      Result = d"2024"
+      Log "Results"
+        Result = 2024

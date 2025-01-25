@@ -1,6 +1,5 @@
 Include ""
 
 Scenario: EmptyInclude
-  Function ValidFunction
   ExpectRootErrors
     "No include file name specified."

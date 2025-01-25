@@ -74,7 +74,7 @@ Scenario: NewFunctionParametersInvalidMember
     Code
       SimpleTarget.Parameters row
       StringResult = row.ResultNumber
-  ExpectError "Invalid member access 'row.ResultNumber'. Variable 'row.ResultNumber' not found."
+  ExpectError "Unknown variable name: 'row.ResultNumber'"
 
 Scenario: NewFunctionResults
   Function:
@@ -93,5 +93,5 @@ Scenario: NewFunctionResultsInvalidMember
     Code
       SimpleTarget.Results row
       NumberResult = row.ResultNumber
-  ExpectError "Invalid member access 'row.ResultNumber'. Variable 'row.ResultNumber' not found."
+  ExpectError "Unknown variable name: 'row.ResultNumber'"
 

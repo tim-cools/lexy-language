@@ -18,39 +18,40 @@ Scenario: IfTrue
   Results
     Number = 666
   ExecutionLogging
-    Log: "Parameters"
-      Evil = true
-    Log: "Execute: If"
-      Log: "number temp = 777"
+    Log "Execute: If"
+      Log "Parameters"
+        Evil = true
+      Log "number temp = 777"
         temp = 777
-      Log: "if Evil"
-        evil = true
-      Log: "  temp = 666"
-        temp = 666
-      Log: "Number = temp"
+      Log "if Evil"
+        Evil = true
+        Log "  temp = 666"
+          temp = 666
+      Log "Number = temp"
         temp = 666
         Number = 666
-    Log: "Results"
-      Number = 666
+      Log "Results"
+        Number = 666
 
 Scenario: IfFalse
   Function If
   Parameters
-    Evil = true
+    Evil = false
   Results
-    Number = 666
+    Number = 888
   ExecutionLogging
-    Log: "Parameters"
-      Evil = true
-    Log: "Execute: If"
-      Log: "number temp = 777"
+    Log "Execute: If"
+      Log "Parameters"
+        Evil = false
+      Log "number temp = 777"
         temp = 777
-      Log: "if Evil"
-        evil = false
-      Log: "  temp = 888"
-        temp = 888
-      Log: "Number = temp"
+      Log "if Evil"
+        Evil = false
+      Log "else"
+        Log "  temp = 888"
+          temp = 888
+      Log "Number = temp"
         temp = 888
         Number = 888
-    Log: "Results"
-      Number = 888
+      Log "Results"
+        Number = 888
