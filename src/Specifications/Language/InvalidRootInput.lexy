@@ -1,0 +1,5 @@
+aaa bbb ccc
+
+Scenario: InvalidKeyword
+  ExpectRootErrors
+    "Invalid token 'aaa'. Keyword expected."
