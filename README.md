@@ -4,36 +4,36 @@
 
 # Philosophy
 
-Lexy is a DSL (Domain Specific Language) designed by Tim Cools to describe tax laws. Currently tax laws are published and updated with, sometimes ambiguous, textual description. 
-The tax system in most countries does favor people with a lot of money who can pay expensive spcialists to learn how to avoid paying taxes. This contributes to widening the income and wealth inequality.
+Lexy is a DSL (Domain Specific Language) designed by Tim Cools to describe tax laws. Currently, tax laws are published and updated with textual descriptions, sometimes ambiguous and open for interpretation. 
+The tax system in most countries favors people with a lot of money who can pay expensive specialists to learn how to avoid paying taxes. This contributes to widening income and wealth inequality.
 
 - What: Executable tax laws published by governments
-- Who: Used by law makers, scientific researchers, tax specialist, IT companies implementing tax laws, students.
-- Why: Consitency and Transparancy: we believe tax returns should be published in public (as some countries in scandinavia)
+- Who: Used by lawmakers, scientific researchers, tax specialists, IT companies implementing tax laws,and  students.
+- Why: Consistency and transparency: we believe tax returns should be published in public (as in some countries in Scandinavia)
 
 
-Besides tax laws the language can be used to implement all kind of calculations. 
+Besides describing tax laws, the language can be used to implement all kinds of calculations. 
 
 Advantages:
-- Computer language independent: calculations can be included in many existing and new application regaderless the language it is written in
-- Real-time execution: The calculations can be changed and executes without the need to recompile the main application. 
-- Simple and readable: the goal is to keep the language as simple as possible. It should be readable by advanced (non-developer) users of spreadsheets. UI's can be maded to update parts of the calculation
-- Transpaancy: during the execution of a lexy script every decicion is logged
+- Computer language independent: Calculations can be integrated into many existing and new applications regardless of the language it is written in. 
+- Real-time execution: The calculations can be changed and executed, without recompiling the main application. 
+- Simple and readable: the goal is to keep the language as simple as possible. It should be readable by advanced (non-developer) spreadsheet users. 
+- Transparency: during the execution of a lexy script every decision is logged
 - Versioning: 
 
 Hosting
 - Public portal/ Local IDE
 - Any host programming language: currently dotnet and typescript/javascript
-- Blockchain: was initial idea. Only necessary when multiple organisations can't fully trust eachother. Government should be able to trust itself.  It would irresponsible use of comuting and storage resources. A blockchain that publicly publishes immutable lexy scripts, executes them and publishes the results in public might have different use-cases though.
+- Blockchain: was the initial idea. The main problem a blockchain solves is the decentralization of trust. While the lack of a central authority can be useful in some cases, this is only necessary when multiple organizations can't fully trust each other. We believe that the government of nations should be able to trust itself, and should be trusted by it's citizens. So storing and executing tax scripts would be an irresponsible use of computing and storage resources. A blockchain that publicly publishes immutable lexy scripts, executes them and publishes the results in public might have different use cases though.
 - GPU
 
 # How to contribute?
 
-I'm looking for a manager who can manage the developmnnt and community (discord)
+I'm looking for a manager who can manage the development and community (discord)
 
-- Tax specialist with IT knowledge, developers with Tax knowledge
+- Tax specialists with IT knowledge, developers with Tax knowledge
 - Government
-- Developers with interest in parsers and compilers
+- Developers withan  interest in parsers and compilers
 - Sponsors/Companies: sponsor developer time
 
 # Syntax
@@ -68,7 +68,7 @@ Each parser shou
 
 ## Known improvements
 
-- [ ] More scenario's for side cases and alternative branches of the current parser. Code coverare reveals validations, ... which are not verified in the language specifications yet
+- [ ] More scenarios for side cases and alternative branches of the current parser. Code coverage reveals validations, ... which are not verified in the language specifications yet
 
 ## Future ideas
 
@@ -77,7 +77,7 @@ Each parser shou
 - [ ] Syntax: support **while** loop
 - [ ] Syntax: support of arrays
 - [ ] Versioning: document versioning strategy for lexy scripts (branches) and how to reuse scripts (by using submodules) 
-- [ ] Versioning: document versioning strategy for **lexy-langage** and it's dependencies
+- [ ] Versioning: document versioning strategy for **lexy-langage** and its dependencies
 
 
 # Implementations notes
