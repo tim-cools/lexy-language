@@ -29,10 +29,12 @@ Hosting
 
 # How to contribute?
 
-Tax specialist with IT knowledge, developers with Tax knowledge
-Govenements
-Developers with interest in parsers and compilers
+I'm looking for a manager who can manage the developmnnt and community (discord)
 
+- Tax specialist with IT knowledge, developers with Tax knowledge
+- Government
+- Developers with interest in parsers and compilers
+- Sponsors/Companies: sponsor developer time
 
 # Syntax
 
