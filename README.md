@@ -73,6 +73,7 @@ Each parser shou
 ## Future ideas
 
 - [ ] Tables: support of csv and/or json tables
+- [ ] Syntax: support identifiers with underscore '_' (double underscores should not be allowed as it is reserved for system functions and variables)
 - [ ] Syntax: support **for** loop
 - [ ] Syntax: support **while** loop
 - [ ] Syntax: support of arrays
