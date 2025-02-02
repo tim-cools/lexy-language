@@ -1,0 +1,61 @@
+Scenario: ValidationTableWithNestedVariables
+  Function:
+    Parameters
+      number Value1
+      string Value2
+    Results
+      number Result1
+      string Result2
+    Code
+      Value1 = Result1
+      Value2 = Result2
+  Table
+    | Value1  | Value2 | Result1 | Result2 |
+    | 0       | "aaa"  | 0       | "aaa"   |
+    | 111     | "bbb"  | 111     | "bbb"   |
+    | 666     | "ccc"  | 666     | "ccc"   |
+    | 777     | "ddd"  | 777     | "ddd"   |
+    | 999     | "eee"  | 999     | "eee"   |
+    
+Type: ComplexType
+  number InnerNumber
+
+Type: CustomType
+  number NumberValue
+  ComplexType Complex
+
+Scenario: ValidationTableWithNestedResults
+  Function:
+    Parameters
+      number Value1
+      number Value2
+    Results
+      CustomType Result
+    Code
+      Result.NumberValue = Value1
+      Result.Complex.InnerNumber = Value2
+  Table
+    | Value1 | Value2 | Result.NumberValue | Result.Complex.InnerNumber |
+    | 0      | 1      | 0                  | 1                          |
+    | 111    | 222    | 111                | 222                        |
+    | 666    | 333    | 666                | 333                        |
+    | 777    | 444    | 777                | 444                        |
+    | 999    | 555    | 999                | 555                        |
+
+Scenario: ValidationTableWithNestedParameters
+  Function:
+    Parameters
+      CustomType Value
+    Results
+      number Result1
+      number Result2
+    Code
+      Result1 = Value.NumberValue
+      Result2 = Value.Complex.InnerNumber
+  Table
+    | Value.NumberValue  | Value.Complex.InnerNumber  | Result1 | Result2 |
+    | 0                  | 1                          | 0       | 1       |
+    | 111                | 222                        | 111     | 222     |
+    | 666                | 333                        | 666     | 333     |
+    | 777                | 444                        | 777     | 444     |
+    | 999                | 555                        | 999     | 555     |

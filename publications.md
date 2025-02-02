@@ -17,11 +17,11 @@ written in Lexy.
 ## Unofficial Publications
 
 | Country         | Tax         | Status   | Author                       | Repository | 
-| --------------- | ------------| -------- | ---------------------------- |---------- | 
+| --------------- | ------------| -------- | ---------------------------- | ---------- | 
 | Dinotopia       | Personal    | Partial  | Harry Potter, Uni. Of London | [github]() |
 | Eastasia        | Personal    | Complete | Dorothy Gale                 | [github]() |
 | Ecotopia        | Corporate   | Complete | Rocky Balboa                 | [github]() |
-| Erewhon         | Inheritance | Parial | Vito Corleone                  | [github]() |
+| Erewhon         | Inheritance | Partial  | Vito Corleone                | [github]() |
 
 ## Get involved!
 
