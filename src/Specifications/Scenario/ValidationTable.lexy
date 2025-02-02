@@ -16,7 +16,7 @@ Scenario: ValidationTableWithNestedVariables
     | 666     | "ccc"  | 666     | "ccc"   |
     | 777     | "ddd"  | 777     | "ddd"   |
     | 999     | "eee"  | 999     | "eee"   |
-    
+
 Type: ComplexType
   number InnerNumber
 
