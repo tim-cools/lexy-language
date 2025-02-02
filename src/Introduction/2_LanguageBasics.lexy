@@ -1,7 +1,9 @@
-Function: ParametersAndResults
-  Parameters
-    string Result
-  Results
-    string Result
-  Code
-    Result = "World Peace ☮️"
+# How to use the editor
+
+# Types
+
+# Compare ==, !=, || and &&
+
+# If 
+
+# Switch

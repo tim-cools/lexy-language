@@ -1,7 +1,10 @@
+#  __    ____  _  _  _  _
+# (  )  (  __)( \/ )( \/ )
+# / (_/\ ) _)  )  (  )  /
+# \____/(____)(_/\_)(__/
+
 Function: HelloWorld
   Results
     string Result
   Code
     Result = "World Peace ☮️"
-
-# How to use the editor
