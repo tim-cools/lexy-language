@@ -6,7 +6,7 @@
 
 The mission of Lexy is to encourage governments to publish their Tax Laws as executable lexy scripts. It would ensure everyone knows how taxes are calculated, and that everyone adheres to the same rules.
 
-View published executable (Tax Laws)[https://github.com/lexy-language/lexy-language/blob/main/publications.md].
+View published executable [Tax Laws](https://github.com/lexy-language/lexy-language/blob/main/publications.md) written in Lexy.
 
 # Philosophy
 
