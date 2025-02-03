@@ -12,7 +12,7 @@ Function: SimpleLookUpNumberFunction
   Results
     number Result
   Code
-    Result = LOOKUP(StringTable, Discriminator, Value, StringTable.SearchValue, StringTable.ResultNumber)
+    Result = LOOKUPBY(StringTable, Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue, StringTable.ResultNumber)
 
 Scenario: LookUpFirstDiscriminator1
   Function SimpleLookUpNumberFunction

@@ -12,7 +12,7 @@ Function: SimpleLookUpNumberFunction
   Results
     number StringTable.Row
   Code
-    Result = LOOKUPROW(StringTable, Discriminator, Value, StringTable.SearchValue, StringTable.ResultNumber)
+    Result = LOOKUPROWBY(StringTable, Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue, StringTable.ResultNumber)
 
 Scenario: LookUpFirstDiscriminator1
   Function SimpleLookUpNumberFunction
