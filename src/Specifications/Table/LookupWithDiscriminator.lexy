@@ -1,0 +1,47 @@
+Table: StringTable
+  | string Discriminator | string SearchValue | number ResultNumber |
+  | "da"                 | "a"                | 222                 |
+  | "da"                 | "b"                | 333                 |
+  | "db"                 | "a"                | 444                 |
+  | "db"                 | "b"                | 555                 |
+
+Function: SimpleLookUpNumberFunction
+  Parameters
+    string Discriminator
+    string Value
+  Results
+    number Result
+  Code
+    Result = LOOKUP(StringTable, Discriminator, Value, StringTable.SearchValue, StringTable.ResultNumber)
+
+Scenario: LookUpFirstDiscriminator1
+  Function SimpleLookUpNumberFunction
+  Parameters
+    Discriminator = "da"
+    Value = "a"
+  Results
+    Result = 222
+
+Scenario: LookUpFirstDiscriminator2
+  Function SimpleLookUpNumberFunction
+  Parameters
+    Discriminator = "da"
+    Value = "b"
+  Results
+    Result = 333
+
+Scenario: LookUpSecondDiscriminator1
+  Function SimpleLookUpNumberFunction
+  Parameters
+    Discriminator = "db"
+    Value = "a"
+  Results
+    Result = 444
+
+Scenario: LookUpSecondDiscriminator2
+  Function SimpleLookUpNumberFunction
+  Parameters
+    Discriminator = "db"
+    Value = "b"
+  Results
+    Result = 5555
