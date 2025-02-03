@@ -44,4 +44,4 @@ Scenario: LookUpSecondDiscriminator2
     Discriminator = "db"
     Value = "b"
   Results
-    Result = 5555
+    Result = 555

@@ -10,9 +10,9 @@ Function: SimpleLookUpNumberFunction
     string Discriminator
     string Value
   Results
-    number StringTable.Row
+    StringTable.Row Result
   Code
-    Result = LOOKUPROWBY(StringTable, Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue, StringTable.ResultNumber)
+    Result = LOOKUPROWBY(StringTable, Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue)
 
 Scenario: LookUpFirstDiscriminator1
   Function SimpleLookUpNumberFunction
@@ -44,4 +44,4 @@ Scenario: LookUpSecondDiscriminator2
     Discriminator = "db"
     Value = "b"
   Results
-    Result.ResultNumber = 5555
+    Result.ResultNumber = 555
