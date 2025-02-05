@@ -180,7 +180,37 @@ Scenario: ElseWithoutIf
       Number = temp
   Parameters
   ExpectErrors
-    "Else should be following an If statement. No if statement found."
+    "'else' should be following an 'if' statement. No 'if' statement found."
+
+Scenario: ElseifWithoutIf
+  Function:
+    Parameters
+    Results
+      number Number
+    Code
+      number temp
+      elseif true
+        temp = 777
+      Number = temp
+  Parameters
+  ExpectErrors
+    "'elseif' should be following an 'if' statement. No 'if' statement found."
+
+Scenario: ElseifAfterElse
+  Function:
+    Parameters
+    Results
+      number Number
+    Code
+      number temp
+      else
+        temp = 888
+      elseif true
+        temp = 777
+      Number = temp
+  Parameters
+  ExpectErrors
+    "'elseif' should be following an 'if' statement. No 'if' statement found."
 
 
 
@@ -333,3 +363,54 @@ Scenario: NestedIfFalseTrue
     FalseProphet = true
   Results
     Number = 888
+
+
+
+
+Function: IfElseif
+  Parameters
+    boolean Evil
+    boolean FalseProphet
+  Results
+    number Number
+  Code
+    number temp
+    if Evil
+      temp = 555
+    elseif FalseProphet
+      temp = 666
+    else
+      temp = 777
+    Number = temp
+
+Scenario: IfElseifTrueTrue
+  Function IfElseif
+  Parameters
+    Evil = true
+    FalseProphet = true
+  Results
+    Number = 555
+
+Scenario: IfElseifTrueFalse
+  Function IfElseif
+  Parameters
+    Evil = true
+    FalseProphet = true
+  Results
+    Number = 555
+
+Scenario: IfElseifFalseTrue
+  Function IfElseif
+  Parameters
+    Evil = false
+    FalseProphet = true
+  Results
+    Number = 666
+
+Scenario: IfElseifFalseFalse
+  Function IfElseif
+  Parameters
+    Evil = false
+    FalseProphet = false
+  Results
+    Number = 777

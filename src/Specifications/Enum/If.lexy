@@ -1,6 +1,7 @@
 Enum: MaritalStatus
   Single
   Married
+  CivilPartnership
 
 Function: EnumWithIfStatement
   Parameters
