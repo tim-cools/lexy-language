@@ -22,7 +22,9 @@ Scenario: InlineFunctionKeywords
 
 Scenario: ScenarioWithValidationTableKeywords
 # Validate Scenario with table keywords
-  Function FunctionKeywords
+  Function:
+    Parameters
+      number a
   ValidationTable
     | a |
     | 0 |
