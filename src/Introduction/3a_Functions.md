@@ -2,6 +2,8 @@
 
 A function is a callable unit of calculation logic that has a well-defined input (parameters) and output (results). A function has parameter and result variables, these are defined under the Parameters and Results keywords. Parameters define the input variables of the function, Results define the output.
 
+DEMO: You can execute the example functions on the right and see the results .
+
 ## Keywords
 
 | Keyword    | Description
@@ -25,7 +27,7 @@ Function: IfUsage
     number Income
     string Province
     date BirthDate
-  Result
+  Results
     boolean HighEarner
     number TaxRate
     string TaxCode
@@ -54,11 +56,11 @@ Function: VariableDeclaration
 The `if`, `elseif` and `else` statements control the flow based on certain conditions.
 
 ```
-Function: IfUsage
+Function: IfElseUsage
   Parameters
     boolean Married
     boolean TaxExemption
-  Result
+  Results
     number TaxRate
   Code
     if TaxExemption
@@ -71,13 +73,13 @@ Function: IfUsage
 
 ### Switch
 
-A `switch` statement controls the flow of the code  based on a cetain value. A `case` statement defines the value, a `default` statement is executed when none of the cases matched.  
+A `switch` statement controls the flow of the code  based on a cetain value. A `case` statement defines the value, a `default` statement is executed when none of the cases matched.
 
 ```
 Function: SwitchUsage
   Parameters
     number Children
-  Result
+  Results
     number Deduction
   Code
     switch Children
@@ -102,7 +104,7 @@ You can use the following operators to compare variables. The result of comparin
 | =        | Assignment
 | +        | Addition
 | -        | Subtraction
-| *        | Addition 
+| *        | Addition
 | /        | Division
 | %        | Modulus
 | ( )      | Define the priority of a calculation statement
@@ -111,13 +113,20 @@ You can use the following operators to compare variables. The result of comparin
 Function: CalculationOperators
   Parameters
     number YearlyIncome
+  Results
+    number Add20k
+    number Subtract20k
+    number DiviseBy2
+    number MultiplyBy40pct
+    number Modulus3
+    number ByPriority
   Code
-    number Add20k = YearlyIncome + 20000       # explicit varable type
-    var Subtract20k = YearlyIncome - 20000     # implicit varable type 
-    var DiviseBy2 = YearlyIncome / 2
-    var MultiplyBy40pct = YearlyIncome * 0.4
-    var Modulus3 = YearlyIncome % 0.4
-    var ByPriority = 0.4 * (YearlyIncome -  12000)
+    Add20k = YearlyIncome + 20000     
+    Subtract20k = YearlyIncome - 20000
+    DiviseBy2 = YearlyIncome / 2
+    MultiplyBy40pct = YearlyIncome * 0.4
+    Modulus3 = YearlyIncome % 200
+    ByPriority = 0.4 * (YearlyIncome -  12000)
 ```
 
 ## Comparison Operators
@@ -137,12 +146,18 @@ You can use the following operators to compare variables. The result of comparin
 Function: ComparisonOperators
   Parameters
     number YearlyIncome
+  Results 
+    boolean IsEqualTo20k
+    boolean IsNotEqualTo20k
+    boolean IsLesserThan20k
+    boolean IsLesserThanOrEqual20k
+    boolean IsGreaterThan20k
+    boolean IsGreaterThanOrEqual20k
   Code
-    boolean IsEqualTo20k = YearlyIncome == 20k         # explicit declaration
-    var IsNotEqualTo20k = YearlyIncome != 20k          # implicit declaration
-    var IsLesserThan20k = YearlyIncome < 20k
-    var IsLesserThanOrEqual20k = YearlyIncome <= 20k
-    var IsGreaterThan20k = YearlyIncome > 20k
-    var IsGreaterThanOrEqual20k = YearlyIncome >= 20k
+    IsEqualTo20k = YearlyIncome == 20000
+    IsNotEqualTo20k = YearlyIncome != 20000
+    IsLesserThan20k = YearlyIncome < 20000
+    IsLesserThanOrEqual20k = YearlyIncome <= 20000
+    IsGreaterThan20k = YearlyIncome > 20000
+    IsGreaterThanOrEqual20k = YearlyIncome >= 20000
 ```
-

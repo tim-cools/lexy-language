@@ -139,3 +139,9 @@ Scenario: LookupRowByYearAndMaxExamples
     | Year | Income | TaxRate | Tax     |
     | 2024 | 10000  | 0.41    | 4100    | 
 ```
+
+## Future
+
+In the future features:
+- Tables will be editable from the UI
+- Include csv files in your lexy scripts

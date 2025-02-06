@@ -29,3 +29,5 @@ Function: TaxableIncomeFederalAndPerCanton
     Canton.InsurancePremiums = -2900
     Canton.TaxableIncome = Canton.NetSalary + Canton.OtherExpenses + Canton.InsurancePremiums
 ```
+
+Execute the function on the right to see the nested result values.
