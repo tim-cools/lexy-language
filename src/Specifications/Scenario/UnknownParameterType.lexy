@@ -10,3 +10,13 @@ Scenario: NestedParametersShouldBeAssignableAndReadable
       Value2 = Result.Complex.InnerNumber
   ExpectErrors
     "Unknown type: 'CustomType'"
+
+Type: ComplexType
+  number Value
+
+Scenario: UnknownNestField
+  Function:
+  ValidationTable
+    | Result.Value |
+  ExpectErrors
+    "Unknown variable: 'Result.Value'"
