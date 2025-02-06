@@ -7,18 +7,18 @@ Function: NaiveTaxLaw
     number TaxValue
     number Tax
   Code
-    TaxValue = 0.6
-    if Income < 40000
-      TaxValue = 0.5
-    if Income < 30000
-      TaxValue = 0.4
-    if Income < 20000
-      TaxValue = 0.3
     if Income < 15000
       TaxValue = 0.2
+    elseif Income < 20000
+      TaxValue = 0.3
+    elseif Income < 30000
+      TaxValue = 0.4
+    elseif Income < 40000
+      TaxValue = 0.5
+    else
+      TaxValue = 0.6
 
     Tax = Income * TaxValue
-
 
 Scenario: NaiveTaxLaw40k
   Function NaiveTaxLaw
@@ -43,7 +43,7 @@ Scenario: NaiveTaxLawScenarios
     | 30000   | 0.5      | 15000 |
     | 40000   | 0.6      | 24000 |
     | 80000   | 0.6      | 48000 |
-    | 1000000 | 0.6      | 60000 |
+    | 100000  | 0.6      | 60000 |
 
 
 # The lexy language itself is described with a collection of lexy scenarios. They define the expected output behvior and even expected compilation and validation errors. These specifications ensure that all lexy compiler implementations in all different languages have the same expected behavior. Have a look at the 'Specifications' folder to see the language specification.
