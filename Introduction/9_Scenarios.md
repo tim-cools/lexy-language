@@ -18,21 +18,21 @@ Function: NaiveTaxLaw
   Parameters
     number Income
   Results
-    number TaxValue
+    number TaxRate
     number Tax
   Code
     if Income < 15000
-      TaxValue = 0.2
+      TaxRate = 0.2
     elseif Income < 20000
-      TaxValue = 0.3
+      TaxRate = 0.3
     elseif Income < 30000
-      TaxValue = 0.4
+      TaxRate = 0.4
     elseif Income < 40000
-      TaxValue = 0.5
+      TaxRate = 0.5
     else
-      TaxValue = 0.6
+      TaxRate = 0.6
 
-    Tax = Income * TaxValue
+    Tax = Income * TaxRate
 ```
 
 ```
@@ -41,7 +41,7 @@ Scenario: NaiveTaxLaw40k
   Parameters
     Income = 40000
   Results
-    TaxValue = 0.6
+    TaxRate = 0.6
     Tax = 24000
 ```
 
@@ -55,7 +55,7 @@ Scenarios also supports a validation table which allows to validate many scenari
 Scenario: NaiveTaxLawScenarios
   Function NaiveTaxLaw
   ValidationTable
-    | Income  | TaxValue | Tax   |
+    | Income  | TaxRate  | Tax   |
     | 12000   | 0.2      | 2400  |
     | 18000   | 0.3      | 5400  |
     | 20000   | 0.4      | 8000  |
