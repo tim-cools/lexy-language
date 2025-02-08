@@ -1,3 +1,9 @@
+Enum: MaritalStatus
+  Single
+  Married
+  CivilPartnership
+  Cohabiting
+
 Function: EnumWithSwitchStatement
   Parameters
     MaritalStatus MaritalStatus
