@@ -1,8 +1,6 @@
 # lexy-language
 
-[View demo!](https://lexy-language.github.io/lexy-editor/)
-
-# Transparant and consistent Tax Laws
+# Transparent and consistent Tax Laws
 
 The mission of Lexy is to encourage governments to publish their Tax Laws as executable lexy scripts. It would ensure everyone knows how taxes are calculated, and that everyone adheres to the same rules.
 
@@ -34,6 +32,14 @@ Hosting:
 - Blockchain: Publishing laws on a blockchain, and calculating taxes on a blockchain was the initial idea. The main problem a blockchain solves is the decentralization of trust. While the lack of a central authority can be useful in some cases (a currency), this is only necessary when multiple organizations can't fully trust each other. We believe that governments should be able to trust themselves, and should be trusted by their citizens. So storing and executing tax scripts would be an irresponsible use of computing and storage resources. A blockchain that publicly publishes immutable lexy scripts, executes them, and publishes the results in public might have different use cases though.
 - GPU
 
+## Learn More
+
+🖥️ [Interactive DEMO! (Desktop only for now)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
+
+📄 [Documentation! (On GitHub)](https://lexy-language.github.io/lexy-editor/)
+
+[![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://github.com/lexy-language/lexy-language/blob/main/README.md)
+
 # How to get involved?
 
 Do you like the mission and want to help it succeed? Do you have any of the following to contribute?
@@ -48,27 +54,17 @@ Do you like the mission and want to help it succeed? Do you have any of the foll
 Then I'd love to hear from you? Please complete the [Get Involved](https://timsarahcools.com/lexy/get-involved/) form!
 (It will take a few weeks before I get back to you, earliest 2nd half of March 2025)
 
-# Syntax
+# Compilers
 
-## Function
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://github.com/lexy-language/lexy-typescript)
+[![Build lexy-typescript](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml)
+![Coverage](https://gist.githubusercontent.com/lexy-language/9179085a171f9629b868662611e06fbd/raw/badges.svg)
 
-`Function: HelloWorld`
+[![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/lexy-language/lexy-dotnet)
+[![Build lexy-dotnet](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml)
+![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/lexy-language/5cd196aad8e9065cdba88b922a8d7bd6/raw/coverage.svg)
 
-## Enum
-
-```
-Enum: MaritalStatus
-  Single
-  Married
-```
-
-## Type
-## Table
-## Scenario
-
-# Language Specifications
-
-## Scenario
+## .NET
 
 # Setup
 

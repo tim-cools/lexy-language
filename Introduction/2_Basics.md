@@ -40,3 +40,8 @@ Function: SecondFunction      # no indentation, start of a new function componen
 ```
 
 Lexy support a strict indentation of 2 spaces or a tab. 
+
+# Next
+
+🖥 ️📄 [Next topic: Example](https://github.com/lexy-language/lexy-language/blob/main/Introduction/3_Example.md)
+

@@ -30,4 +30,8 @@ Function: TaxableIncomeFederalAndPerCanton
     Canton.TaxableIncome = Canton.NetSalary + Canton.OtherExpenses + Canton.InsurancePremiums
 ```
 
-Execute the function on the right to see the nested result values.
+🖥️ Execute the function on the right to see the nested result values.
+
+# Next
+
+🖥 ️📄 [Next topic: Tables](https://github.com/lexy-language/lexy-language/blob/main/Introduction/7_Tables.md)

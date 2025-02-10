@@ -67,3 +67,7 @@ Scenario: EnumWithSwitchStatementExamples
     | MaritalStatus.CivilPartnership | 0.41 |
     | MaritalStatus.Cohabiting       | 0.42 |
 ```
+
+# Next
+
+🖥 ️📄 [Next topic: Types](https://github.com/lexy-language/lexy-language/blob/main/Introduction/6_Types.md)

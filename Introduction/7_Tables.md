@@ -1,4 +1,4 @@
-#Tables
+# Tables
 
 Tables store rows of values in a specific format. The column names and types are defined by the first row, the header of the table.
 
@@ -175,3 +175,7 @@ Scenario: LookupRowByYearAndMaxExamples
 In the future features:
 - Tables will be editable from the UI
 - Include csv files in your lexy scripts
+
+# Next
+
+🖥 ️📄 [Next topic: Built-In Functions](https://github.com/lexy-language/lexy-language/blob/main/Introduction/8_BuiltInFunctions.md)

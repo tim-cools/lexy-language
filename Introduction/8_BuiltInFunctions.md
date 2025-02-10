@@ -52,3 +52,7 @@ Examples: [github](https://github.com/lexy-language/lexy-language/tree/main/Spec
 | new(complexType)  | complexType | Declares a new complex type variable with default values
 | fill(complexType) | complexType | Declares a new complex type variable and fill the fields with the values of the corresponding variables
 | extract(variable) | {no return} | Extract all field values from the variable and set the value to the corresponding variables
+
+# Next
+
+🖥 ️📄 [Next topic: Call Functions](https://github.com/lexy-language/lexy-language/blob/main/Introduction/9_CallFunctions.md)

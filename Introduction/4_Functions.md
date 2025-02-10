@@ -161,3 +161,7 @@ Function: ComparisonOperators
     IsGreaterThan20k = YearlyIncome > 20000
     IsGreaterThanOrEqual20k = YearlyIncome >= 20000
 ```
+
+# Next
+
+🖥 ️📄 [Next topic: Enums](https://github.com/lexy-language/lexy-language/blob/main/Introduction/5_Enums.md)
