@@ -64,6 +64,10 @@ Then I'd love to hear from you? Please complete the [Get Involved](https://timsa
 [![Build lexy-dotnet](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml)
 ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/lexy-language/5cd196aad8e9065cdba88b922a8d7bd6/raw/coverage.svg)
 
+# Editor
+
+[![Build lexy-editor](https://github.com/lexy-language/lexy-editor/actions/workflows/build.yml/badge.svg)](https://github.com/lexy-language/lexy-editor/actions/workflows/build.yml)
+
 ## .NET
 
 # Setup
