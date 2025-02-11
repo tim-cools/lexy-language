@@ -1,12 +1,13 @@
 # lexy-language
-
-# Transparent and consistent Tax Laws
+🖥️ [Interactive DEMO! (Desktop only for now)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
+📄 [Documentation! (On GitHub)](https://lexy-language.github.io/lexy-editor/)
+## Transparent and consistent Tax Laws
 
 The mission of Lexy is to encourage governments to publish their Tax Laws as executable lexy scripts. It would ensure everyone knows how taxes are calculated, and that everyone adheres to the same rules.
 
 View published executable [Tax Laws](https://github.com/lexy-language/lexy-language/blob/main/publications.md) written in Lexy.
 
-# Philosophy
+## Philosophy
 
 Lexy is a DSL (Domain Specific Language) designed by Tim Cools to describe tax laws. Currently, tax laws are published and updated with textual descriptions (Tax Laws), often ambiguous and open for interpretation. 
 Besides that, the effective tax calculation code contains exceptions for individuals and companies which are sometimes not even approved by official laws or rulings.
@@ -34,13 +35,12 @@ Hosting:
 
 ## Learn More
 
-🖥️ [Interactive DEMO! (Desktop only for now)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
-
+🖥️ [Interactive DEMO! (Desktop only for now)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md) 
 📄 [Documentation! (On GitHub)](https://lexy-language.github.io/lexy-editor/)
 
 [![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://github.com/lexy-language/lexy-language/blob/main/README.md)
 
-# How to get involved?
+## How to get involved?
 
 Do you like the mission and want to help it succeed? Do you have any of the following to contribute?
 
@@ -51,10 +51,9 @@ Do you like the mission and want to help it succeed? Do you have any of the foll
 - Organisational (Management)
 - Anything else you think of that can contribute to helping the mission succeed?
 
-Then I'd love to hear from you? Please complete the [Get Involved](https://timsarahcools.com/lexy/get-involved/) form!
-(It will take a few weeks before I get back to you, earliest 2nd half of March 2025)
+Then we'd love to hear from you? [Fill in the contact form to register as a contributor!](https://lucidmonk.live-website.com/lexy/get-involved/) - Reality is pretty crazy now 😊 So we'll ge back to you in a few weeks, probably second half of March. (Please only us for involvement in this project, anything else will be ignored!)
 
-# Compilers
+## Compilers
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://github.com/lexy-language/lexy-typescript)
 [![Build lexy-typescript](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml)
@@ -63,16 +62,6 @@ Then I'd love to hear from you? Please complete the [Get Involved](https://timsa
 [![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/lexy-language/lexy-dotnet)
 [![Build lexy-dotnet](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml)
 ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/lexy-language/5cd196aad8e9065cdba88b922a8d7bd6/raw/coverage.svg)
-
-## .NET
-
-# Setup
-
-## Run locally
-
-Each parser shou
-[lexy-dotnet](https://github.com/lexy-language/lexy-dotnet) or [lexy-typescript](https://github.com/lexy-language/lexy-typescript) run these specfications to validate the outcome in their automated tests.
-
 
 ## Known improvements
 
@@ -85,13 +74,3 @@ Each parser shou
 - [ ] Versioning: document versioning strategy for lexy scripts in Git (branches) and how to reuse scripts (by using submodules) 
 - [ ] Versioning: document versioning strategy for **lexy-langage** and its dependencies
 - [ ] Validation: check tables are sorted alphabetically.
-
-# Implementations notes
-
-## Submodules
-
-**lexy-language** is included as a git submodule. 
-- **lexy-language** is used in the automated tests to 
-ensure that the parser and compiler are running against the latest lexy language specifications.
-
-To update the submodule to the latest version: `cd tests/lexy-language/ && git pull` (ensure you pull the right branch is you're implementing a new branch of lexy-language)

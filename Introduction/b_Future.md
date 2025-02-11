@@ -19,7 +19,7 @@ What's next? How can you help?
 
 ### Do you have knowledge about Tax Laws? Or you'd like to contribute in another way? 
 
-- [Fill in the contact form to register as a contributor!](https://lucidmonk.live-website.com/lexy/get-involved/) - Reality is pretty crazy now 😊 So we'll ge back to you in a few weeks, probably second half of March.
+- [Fill in the contact form to register as a contributor!](https://lucidmonk.live-website.com/lexy/get-involved/) - Reality is pretty crazy now 😊 So we'll ge back to you in a few weeks, probably second half of March. (Please only us for involvement in this project, anything else will be ignored!)
 
 ### For the techies...
 
