@@ -17,9 +17,17 @@ What's next? How can you help?
 - Do you want to contribute to Lexy? Have a look at the contribute paragraph on the [README](https://github.com/lexy-language/lexy-language/) of the lexy-language repository!
 - [Check out the interactive DEMO!](https://github.com/lexy-language/lexy-language/blob/main/Specifications/Readme.md) - View, edit and creat your own Lexy script from the browser. (Desktop Only)
 
-### Do you have knowledge about Tax Laws? Or you'd like to contribute in another way? 
+### Do you have knowledge about Tax Laws? Or you'd like to contribute in another way?
 
-- [Fill in the contact form to register as a contributor!](https://lucidmonk.live-website.com/lexy/get-involved/) - Reality is pretty crazy now 😊 So we'll ge back to you in a few weeks, probably second half of March. (Please only us for involvement in this project, anything else will be ignored!)
+How can you help?
+- Implement your local Tax Laws in Lexy and publish them in public on GitHub as examples. They can be added to the publications.md if they are fairly complete.
+- Convert the compiler to other languages so you can run Lexy scripts in your favourite language or existing code-base? (java, php, ruby, c, c++, rust, ...)
+- Demand governments to publish the real Tax Lax used in their system as an executable Lexy script. First step is to be fully transparent about how taxes are calculated and about which exemptions are in the code or hidden in the Tax rules.
+- Moderate the Discord or help management of the GitHub projects
+
+If you want to work on any of these, please discuss first on **Discord** so that people are not working on the same compiler for example:
+
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/JmzvKNWFqE)](https://discord.gg/JmzvKNWFqE)
 
 ### For the techies...
 
