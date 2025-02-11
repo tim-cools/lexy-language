@@ -55,7 +55,15 @@ Do you like the mission and want to help it succeed? Do you have any of the foll
 - Organisational (Management)
 - Anything else you think of that can contribute to helping the mission succeed?
 
-Then we'd love to hear from you! [Fill in the contact form to register as a contributor!](https://lucidmonk.live-website.com/lexy/get-involved/) - Reality is pretty crazy now 😊 So we'll ge back to you in a few weeks, probably second half of March. (Please only us for involvement in this project, anything else will be ignored!)
+How can you help?
+- Implement your local Tax Laws in Lexy and publish them in public on GitHub as examples. They can be added to the publications.md if they are fairly complete.
+- Convert the compiler to other languages so you can run Lexy scripts in your favourite language or existing code-base? (java, php, ruby, c, c++, rust, ...)
+- Demand governments to publish the real Tax Lax used in their system as an executable Lexy script. First step is to be fully transparent about how taxes are calculated and about which exemptions are in the code or hidden in the Tax rules.
+- Moderate the Discord or help management of the GitHub projects
+
+If you want to work on any of these, please discuss first on **Discord** so that people are not working on the same compiler for example:
+
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/JmzvKNWFqE)](https://discord.gg/JmzvKNWFqE)
 
 ## Compilers
 
