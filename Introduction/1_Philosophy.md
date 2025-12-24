@@ -58,7 +58,7 @@ Check the 'Test Logging' below for the automated tests logging.
 
 ## How to use the editor
 
-DEMO: This editor supports both `lexy` as `md` (markup files). All lexy code, also the code embedded in `md` files, is
+🖥️ DEMO: This editor supports both `lexy` as `md` (markup files). All lexy code, also the code embedded in `md` files, is
 parsed and compiled in real time. All automated tests are also executed in real-time. You can always edit the source code
 to see how the parser react.
 
@@ -68,4 +68,8 @@ to see how the parser react.
 - After execution, you can view a detailed log of the execution under 'Execution Logging'.
 - You find real-time compilation errors in the 'Logging' below.
 - All scenarios (lexy automated tests) are executed in real time. You find the feedback in 'Test Logging' below.
+
+# Next
+
+🖥 ️📄 [Next topic: Basics](https://github.com/lexy-language/lexy-language/blob/main/Introduction/2_Basics.md)
 

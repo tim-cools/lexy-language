@@ -127,3 +127,7 @@ Scenario: NestedFieldsWithTable
     | 5                  | "abc"            | 5                   | "abc"             |   
     | 8                  | "def"            | 8                   | "def"             |
 ```
+
+# Next
+
+🖥 ️📄 [Next topic: Future](https://github.com/lexy-language/lexy-language/blob/main/Introduction/b_Future.md)

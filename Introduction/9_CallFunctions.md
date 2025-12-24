@@ -162,3 +162,7 @@ Scenario: ExtractResultsObjectExamples
     | 100000 | 0        | 0.5     | 50000  |
     | 200000 | 0        | 0.5     | 100000 |
 ```
+
+# Next
+
+🖥 ️📄 [Next topic: Scenarios](https://github.com/lexy-language/lexy-language/blob/main/Introduction/a_Scenarios.md)

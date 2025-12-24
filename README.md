@@ -1,14 +1,14 @@
 # lexy-language
+🖥️ [Interactive DEMO! (Web from a desktop browser only for now)](https://lexy-language.github.io/lexy-editor/)
+📄 [Documentation! (On GitHub)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
 
-[View demo!](https://lexy-language.github.io/lexy-editor/)
-
-# Transparant and consistent Tax Laws
+## Transparent and consistent Tax Laws
 
 The mission of Lexy is to encourage governments to publish their Tax Laws as executable lexy scripts. It would ensure everyone knows how taxes are calculated, and that everyone adheres to the same rules.
 
 View published executable [Tax Laws](https://github.com/lexy-language/lexy-language/blob/main/publications.md) written in Lexy.
 
-# Philosophy
+## Philosophy
 
 Lexy is a DSL (Domain Specific Language) designed by Tim Cools to describe tax laws. Currently, tax laws are published and updated with textual descriptions (Tax Laws), often ambiguous and open for interpretation. 
 Besides that, the effective tax calculation code contains exceptions for individuals and companies which are sometimes not even approved by official laws or rulings.
@@ -30,11 +30,21 @@ Besides describing Tax Laws, the language can also be used to implement all kind
 
 Hosting:
 - Public portal/ Local IDE: lexy provides a [demo!](https://lexy-language.github.io/lexy-editor/) so you can learn more about the language.
-- Any host programming language: currently dotnet and typescript/javascript
-- Blockchain: Publishing laws on a blockchain, and calculating taxes on a blockchain was the initial idea. The main problem a blockchain solves is the decentralization of trust. While the lack of a central authority can be useful in some cases (a currency), this is only necessary when multiple organizations can't fully trust each other. We believe that governments should be able to trust themselves, and should be trusted by their citizens. So storing and executing tax scripts would be an irresponsible use of computing and storage resources. A blockchain that publicly publishes immutable lexy scripts, executes them, and publishes the results in public might have different use cases though.
-- GPU
+- The Lexy script compiler can be implemented in any programming language. Current compilers: [typescript/javascript](https://github.com/lexy-language/lexy-typescript) and [.NET](https://github.com/lexy-language/lexy-dotnet) 
+- Blockchain: Publishing and executing laws on a blockchain was Tim's initial idea. The main problem a blockchain solves is the decentralization of trust. While the lack of a central authority can be useful in some cases (a currency), this is only necessary when multiple organizations can't fully trust each other. We believe that governments should be able to trust themselves, and should be trusted by their citizens. So storing and executing tax scripts would be an irresponsible use of computing and storage resources. A blockchain that publicly publishes immutable lexy scripts, executes them, and publishes the results in public might have different use cases though.
 
-# How to get involved?
+## Learn More
+
+The documentation can be viewed in two ways:
+
+🖥️ [Interactive DEMO! (Web from a desktop browser only for now)](https://lexy-language.github.io/lexy-editor/) 
+📄 [Documentation! (On GitHub)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
+
+Both contain the same information.
+
+[![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://github.com/lexy-language/lexy-language/blob/main/README.md)
+
+## How to get involved?
 
 Do you like the mission and want to help it succeed? Do you have any of the following to contribute?
 
@@ -45,38 +55,29 @@ Do you like the mission and want to help it succeed? Do you have any of the foll
 - Organisational (Management)
 - Anything else you think of that can contribute to helping the mission succeed?
 
-Then I'd love to hear from you? Please complete the [Get Involved](https://timsarahcools.com/lexy/get-involved/) form!
-(It will take a few weeks before I get back to you, earliest 2nd half of March 2025)
+How can you help?
+- Implement your local Tax Laws in Lexy and publish them in public on GitHub as examples. They can be added to the publications.md if they are fairly complete.
+- Convert the compiler to other languages so you can run Lexy scripts in your favourite language or existing code-base? (java, php, ruby, c, c++, rust, ...)
+- Demand governments to publish the real Tax Lax used in their system as an executable Lexy script. First step is to be fully transparent about how taxes are calculated and about which exemptions are in the code or hidden in the Tax rules.
+- Moderate the Discord or help management of the GitHub projects
 
-# Syntax
+If you want to work on any of these, please discuss first on **Discord** so that people are not working on the same compiler for example:
 
-## Function
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/JmzvKNWFqE)](https://discord.gg/JmzvKNWFqE)
 
-`Function: HelloWorld`
+## Compilers
 
-## Enum
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://github.com/lexy-language/lexy-typescript)
+[![Build lexy-typescript](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-typescript/actions/workflows/build.yml)
+![Coverage](https://gist.githubusercontent.com/lexy-language/9179085a171f9629b868662611e06fbd/raw/badges.svg)
 
-```
-Enum: MaritalStatus
-  Single
-  Married
-```
+[![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/lexy-language/lexy-dotnet)
+[![Build lexy-dotnet](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lexy-language/lexy-dotnet/actions/workflows/build.yml)
+![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/lexy-language/5cd196aad8e9065cdba88b922a8d7bd6/raw/coverage.svg)
 
-## Type
-## Table
-## Scenario
+## Editor
 
-# Language Specifications
-
-## Scenario
-
-# Setup
-
-## Run locally
-
-Each parser shou
-[lexy-dotnet](https://github.com/lexy-language/lexy-dotnet) or [lexy-typescript](https://github.com/lexy-language/lexy-typescript) run these specfications to validate the outcome in their automated tests.
-
+[![Build lexy-editor](https://github.com/lexy-language/lexy-editor/actions/workflows/build.yml/badge.svg)](https://github.com/lexy-language/lexy-editor/actions/workflows/build.yml)
 
 ## Known improvements
 
@@ -89,13 +90,3 @@ Each parser shou
 - [ ] Versioning: document versioning strategy for lexy scripts in Git (branches) and how to reuse scripts (by using submodules) 
 - [ ] Versioning: document versioning strategy for **lexy-langage** and its dependencies
 - [ ] Validation: check tables are sorted alphabetically.
-
-# Implementations notes
-
-## Submodules
-
-**lexy-language** is included as a git submodule. 
-- **lexy-language** is used in the automated tests to 
-ensure that the parser and compiler are running against the latest lexy language specifications.
-
-To update the submodule to the latest version: `cd tests/lexy-language/ && git pull` (ensure you pull the right branch is you're implementing a new branch of lexy-language)

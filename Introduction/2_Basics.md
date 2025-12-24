@@ -38,5 +38,9 @@ Function: FirstFunction       # no indentation, start of a function component
     Tax = Income * TaxRate    # 4 spaces indentation, the assignment is part of the Code
                               # empty lines are ignored by the compiler
 Function: SecondFunction      # no indentation, start of a new function component
-
 ```
+
+
+# Next
+
+🖥 ️📄 [Next topic: Example](https://github.com/lexy-language/lexy-language/blob/main/Introduction/3_Example.md)
