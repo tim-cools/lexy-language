@@ -14,7 +14,7 @@ Several keywords describe errors occurred while parsing and compiling invalid le
 | Enum                  | Describe an inline function that is verified by the scenario
 | ExecutionLogging      | Describe how the execution logging should look like
 | ExpectErrors          | Expect a scenario to return certain compilation errors
-| ExpectRootErrors      | Expect certain compilation errors on the root level (they caused a function, or other component to fail)
+| ExpectComponentErrors | Expect certain compilation errors on the component level (they caused a function, or other component to fail)
 | ExpectExecutionErrors | Expect certain errors while executing a function. These are parameter validation errors)
 
 **!! All these keywords are only intended to use in the language specifications, and not in Tax Law scripts !!**

@@ -22,7 +22,7 @@ Enum: DuplicateEnumName
   First = 1
 
 Scenario: DuplicateScenarioName
-  ExpectRootErrors
+  ExpectComponentErrors
     "Duplicated node name: 'DuplicateTableName'"
     "Duplicated node name: 'DuplicateFunctionName'"
     "Duplicated node name: 'DuplicateEnumName'"

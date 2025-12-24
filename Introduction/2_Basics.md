@@ -4,7 +4,7 @@ The goals the Lexy Language is to be as simple as possible to describe very comp
 
 ## Keywords
 
-Lexy contains 5 root level keywords that define the Lexy components 
+Lexy contains 5 keywords that define the Lexy components.  
 
 | Keyword   | Description 
 | --------- | -----------
@@ -22,7 +22,9 @@ Comments start with a #. Everything on a line after a # will be ignored by the c
 
 ## Indentation
 
-Indentation is used to determine the structure of a lexy script. 
+Indentation is used to determine the structure of a lexy script. Lexy support a strict indentation of 2 spaces or a tab. 
+Component keywords are always placed at the first character of a line.
+Children of keywords always use 2 spaces more as indentation as their parent.
 
 ```
 Function: FirstFunction       # no indentation, start of a function component
@@ -38,5 +40,3 @@ Function: FirstFunction       # no indentation, start of a function component
 Function: SecondFunction      # no indentation, start of a new function component
 
 ```
-
-Lexy support a strict indentation of 2 spaces or a tab. 
