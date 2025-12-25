@@ -1,4 +1,4 @@
-Enum: TableEnum
+enum TableEnum
   A
   B
   C

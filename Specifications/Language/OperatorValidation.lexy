@@ -1,4 +1,4 @@
-Enum: EnumValue
+enum EnumValue
   First
   Second
 

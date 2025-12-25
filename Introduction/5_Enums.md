@@ -3,7 +3,7 @@
 An enum represents a single value with a limited number of values. It is used to limit the number
 
 ```
-Enum: MaritalStatus
+enum MaritalStatus
   Single
   Married
   CivilPartnership

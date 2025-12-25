@@ -29,7 +29,7 @@ scenario ScenarioWithValidationTableKeywords
     | a |
     | 0 |
 
-Enum: ValidateEnumKeyword
+enum ValidateEnumKeyword
   First = 0
   Second = 1
 

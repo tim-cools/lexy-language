@@ -13,7 +13,7 @@ Type: SimpleType
   NestedType ChildTypeValue
   SimpleEnum ChildEnumValue
 
-Enum: SimpleEnum
+enum SimpleEnum
   First
   Next
   Last

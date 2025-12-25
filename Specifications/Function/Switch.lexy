@@ -92,7 +92,7 @@ scenario StringSwitchDefault
     Number = "888"
 
 
-Enum: SwitchValue
+enum SwitchValue
   Holy
   Evil
   Unknown

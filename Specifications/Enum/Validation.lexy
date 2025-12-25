@@ -1,25 +1,25 @@
 scenario InvalidEnumNegativeValue
-  Enum: InvalidEnumNegativeValueEnum
+  enum InvalidEnumNegativeValueEnum
     First = 0
     Second = -1
   ExpectErrors
     "Validation.lexy(4, 15): ERROR - Invalid number of tokens: 4. Should be 1 or 3."
 
 scenario InvalidEnumDecimalValue
-  Enum: InvalidEnumDecimalValueEnum
+  enum InvalidEnumDecimalValueEnum
     First = 0
     Second = 1.1
   ExpectErrors
     "Enum member value should not be decimal: 1.1"
 
 scenario InvalidEnumDuplicatedMember
-  Enum: InvalidVEnumDuplicatedMemberEnum
+  enum InvalidVEnumDuplicatedMemberEnum
     First = 0
     First = 1
   ExpectErrors
     "Enum member name should be unique. Duplicate name: 'First'"
 
-Enum: ValidEnum
+enum ValidEnum
   First
   Second
   Third

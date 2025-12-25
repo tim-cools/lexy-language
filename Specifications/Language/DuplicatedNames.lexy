@@ -15,10 +15,10 @@ Table: DuplicateTableName
 
 function DuplicateTableName
 
-Enum: DuplicateEnumName
+enum DuplicateEnumName
   First = 1
 
-Enum: DuplicateEnumName
+enum DuplicateEnumName
   First = 1
 
 scenario DuplicateScenarioName
