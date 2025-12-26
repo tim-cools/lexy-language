@@ -6,9 +6,9 @@ Lexy has built in automated testing. A scenario describes the parameters and the
 
 | Keyword    | Description                                      |
 |------------|--------------------------------------------------|
-| Function   | Name of the function to test                     |
-| Parameters | Parameter variables used to execute the function | 
-| Results    | Expected result variable values                  | 
+| function   | Name of the function to test                     |
+| parameters | Parameter variables used to execute the function | 
+| results    | Expected result variable values                  | 
 
 ## Example
 

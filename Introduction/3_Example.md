@@ -18,7 +18,7 @@ function NaiveFlatTaxLaw
   TotalTax = TaxableIncomeYear * TaxRate
 ```
 
-On the right in the UI you can execute the function, for example enter 45000 and press the Execute button. It will show you the results variables of the function. If you click Execution Logging below, you can see all the execute lines and the variables used on this line. This can be stored for transparency and debugging.
+On the right in the UI you can execute the function, for example enter 45000 and press the Execute button. It will show you the results variables of the function. If you click Execution Logging below, you can see all the executed lines and the variables used on this line. This can be stored for transparency and debugging.
 
 Lexy has built in automated testing to describe the desire behavior of a function. These are called a Scenario. Scenarios are useful to specific the expected results while executing a function with certain parameters. They are useful to ensure functions keeps working after the code is updated or refactored.
 
