@@ -21,7 +21,7 @@ TODO
     - Lexy.SpecificationsRunner
   - Failed parsing of Date is not an error
   - Failed parsing of scenario shouldn't throw exception, but log errors
-  - Test expect errors and root errors
+  - Test expect errors and component errors
   - Scenario with a validation table
   - Nested results and parameter valued (set child values with indentation)
 
