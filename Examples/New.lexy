@@ -1,0 +1,12 @@
+function NewFunction
+  parameters
+    number Input
+  results
+    number Output
+    string Message
+
+  Output = Input
+  Message = "☮ & ❤️"
+
+
+

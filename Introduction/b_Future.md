@@ -31,6 +31,8 @@ If you want to work on any of these, please discuss first on **Discord** so that
 
 ### For the techies...
 
+- [Check out the examples!](https://github.com/lexy-language/lexy-language/blob/main/Examples/New.md)
+
 - [Check out Lexy Language Specifications!](https://github.com/lexy-language/lexy-language/blob/main/Specifications/Readme.md)
 
 - [Check out TypeScript Compiler](https://github.com/lexy-language/lexy-language/blob/main/Specifications/Readme.md)
