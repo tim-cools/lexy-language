@@ -5,4 +5,4 @@
 - Fix inconsistencies in node name (sometimes value object without validation)
 - TEST: multiple lookup calls with same signature
 - ScenarioRunner.setParameter > check inner property types
-- Refactor built in funciton scenarios so that the functions take values as parameters instead of default so it can be executed in UI
+- Refactor built in function scenarios so that the functions take values as parameters instead of default so it can be executed in UI
