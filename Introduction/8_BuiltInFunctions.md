@@ -6,12 +6,12 @@ declare fill and extract values from complex types.
 ## number Functions
 Examples: [github](https://github.com/lexy-language/lexy-language/tree/main/Specifications/BuiltInFunctions/Number.lexy)
 
-| function              | description  | 
-| --------------------- | ------------ |
-| int(value)            | Returns the integer part of a decimal number by rounding down to the integer |
-| abs(value)            | Returns the absolute value of a number |
-| power(number, power)  | Returns the result of a number raised to a power |
-| round(number, digits) | Rounds a number to a specified number of digits  |
+| function                   | description  | 
+|----------------------------| ------------ |
+| Number.Floor(value)        | Returns the integer part of a decimal number by rounding down to the integer |
+| Number.Abs(value)          | Returns the absolute value of a number |
+| Math.power(number, power)  | Returns the result of a number raised to a power |
+| Math.round(number, digits) | Rounds a number to a specified number of digits  |
 
 ##date Functions
 Examples: [github](https://github.com/lexy-language/lexy-language/tree/main/Specifications/BuiltInFunctions/Date.lexy)

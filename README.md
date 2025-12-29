@@ -2,6 +2,10 @@
 🖥️ [Interactive DEMO! (Web from a desktop browser only for now)](https://lexy-language.github.io/lexy-editor/)
 📄 [Documentation! (On GitHub)](https://github.com/lexy-language/lexy-language/blob/main/Introduction/1_Philosophy.md)
 
+## Lexy
+
+A simple programming language for implementing various mathematical calculations and tax laws.
+
 ## Transparent and consistent Tax Laws
 
 The mission of Lexy is to encourage governments to publish their Tax Laws as executable lexy scripts. It would ensure everyone knows how taxes are calculated, and that everyone adheres to the same rules.
@@ -81,12 +85,23 @@ If you want to work on any of these, please discuss first on **Discord** so that
 
 ## Known improvements
 
-- [ ] More scenarios for side cases and alternative branches of the current parser. Code coverage reveals validations, ... which are not verified in the language specifications yet
+- [ ] More scenarios for side cases and alternative branches of the current parser. Code coverage reveals validations and code paths which are not verified in the language specifications yet
 
 ## Future ideas
 
-- [ ] Tables: support of csv and/or json tables
+Please discuss with main maintainers before creating any pull requests!
+
+- [ ] Tables: support of csv, json, ... tables
 - [ ] Syntax: support identifiers with underscore '_' (double underscores should not be allowed as it is reserved for system functions and variables)
-- [ ] Versioning: document versioning strategy for lexy scripts in Git (branches) and how to reuse scripts (by using submodules) 
-- [ ] Versioning: document versioning strategy for **lexy-langage** and its dependencies
-- [ ] Validation: check tables are sorted alphabetically.
+- [ ] Syntax: for and while loop (compiler option to disable (or limit to constants) to simplify discrete optimization if ne)
+- [ ] Syntax: arrays and lists
+- [ ] Versioning: document versioning strategy for lexy scripts in Git (branches) and how to reuse scripts (by using submodules)
+- [ ] Versioning: roadmap to version 1 and document versioning strategy for **lexy-langage** and its dependencies
+- [ ] Validation: check tables are sorted alphabetically 
+- [ ] Tools: command line tools run, compile, test lexy script
+- [ ] Tools: (batch) tool to process (stream large) data sets with a lexy function
+- [ ] Tools: visualizations
+- [ ] Libraries: add string processing, statistics, matrices, processing data from files, json/yaml, call api, dsp, ... (only if you really need it!) 
+- [ ] AI: LLM to extract tax calculations from published tax laws and translate it into Lexy scripts
+- [ ] AI: Discrete optimization extension to optimize calculations
+- [ ] Blockchain: a blockchain running official Lexy Tax Laws by governments verified by it's citizens 

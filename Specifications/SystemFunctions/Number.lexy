@@ -2,7 +2,7 @@ scenario Abs
   function
     results
       number Result
-    Result = abs(2)
+    Result = Number.Abs(2)
   results
     Result = 2
 
@@ -10,23 +10,23 @@ scenario AbsNegative
   function
     results
       number Result
-    Result = abs(-2)
+    Result = Number.Abs(-2)
   results
     Result = 2
 
-scenario Int
+scenario Floor
   function
     results
       number Result
-    Result = int(8.9)
+    Result = Number.Floor(8.9)
   results
     Result = 8
 
-scenario IntNegative
+scenario FloorNegative
   function
     results
       number Result
-    Result = int(-8.9)
+    Result = Number.Floor(-8.9)
   results
     Result = -9
 
@@ -34,7 +34,7 @@ scenario Power
   function
     results
       number Result
-    Result = power(5,2)
+    Result = Math.Power(5,2)
   results
     Result = 25
 
@@ -42,7 +42,7 @@ scenario PowerDecimal
   function
     results
       number Result
-    Result = round(power(98.6,3.2), 3)
+    Result = Math.Round(Math.Power(98.6,3.2), 3)
   results
     Result = 2401077.222
 
@@ -50,7 +50,7 @@ scenario PowerDivision
   function
     results
       number Result
-    Result = round(power(4,5/4), 9)
+    Result = Math.Round(Math.Power(4,5/4), 9)
   results
     Result = 5.656854249
 
@@ -60,7 +60,7 @@ function RoundFunction
     number Digits
   results
     number Result
-  Result = round(Value, Digits)
+  Result = Math.Round(Value, Digits)
 
 scenario RoundFraction1
   function RoundFunction

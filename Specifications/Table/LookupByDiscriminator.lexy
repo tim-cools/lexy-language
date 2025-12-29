@@ -5,16 +5,16 @@ table StringTable
   | "db"                 | "a"                | 444                 |
   | "db"                 | "b"                | 555                 |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     string Discriminator
     string Value
   results
     number Result
-  Result = lookUpBy(StringTable, Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue, StringTable.ResultNumber)
+  Result = StringTable.LookUp(Discriminator, Value, StringTable.Discriminator, StringTable.SearchValue, StringTable.ResultNumber)
 
 scenario LookUpFirstDiscriminator1
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Discriminator = "da"
     Value = "a"
@@ -22,7 +22,7 @@ scenario LookUpFirstDiscriminator1
     Result = 222
 
 scenario LookUpFirstDiscriminator2
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Discriminator = "da"
     Value = "b"
@@ -30,7 +30,7 @@ scenario LookUpFirstDiscriminator2
     Result = 333
 
 scenario LookUpSecondDiscriminator1
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Discriminator = "db"
     Value = "a"
@@ -38,9 +38,52 @@ scenario LookUpSecondDiscriminator1
     Result = 444
 
 scenario LookUpSecondDiscriminator2
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Discriminator = "db"
     Value = "b"
   results
     Result = 555
+
+
+
+function LookUpDefaultColumnsNumberFunction
+  parameters
+    string Discriminator
+    string Value
+  results
+    number Result
+  Result = StringTable.LookUp(Discriminator, Value, StringTable.ResultNumber)
+
+scenario LookUpDefaultColumnsFirstDiscriminator1
+  function LookUpNumberFunction
+  parameters
+    Discriminator = "da"
+    Value = "a"
+  results
+    Result = 222
+
+scenario LookUpDefaultColumnsFirstDiscriminator2
+  function LookUpNumberFunction
+  parameters
+    Discriminator = "da"
+    Value = "b"
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnsSecondDiscriminator1
+  function LookUpNumberFunction
+  parameters
+    Discriminator = "db"
+    Value = "a"
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnsSecondDiscriminator2
+  function LookUpNumberFunction
+  parameters
+    Discriminator = "db"
+    Value = "b"
+  results
+    Result = 555
+

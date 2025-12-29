@@ -13,29 +13,29 @@ table StringTable
   | TableEnum.C           | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
   | TableEnum.D           | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     TableEnum Value
   results
     number Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultNumber)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultNumber)
 
 scenario LookUpNumber
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = TableEnum.B
   results
     Result = 333
 
 scenario LookUpNumberWithDecimal
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = TableEnum.CA
   results
     Result = 444
 
 scenario LookUpEnumAfterRange
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = TableEnum.E
   results
@@ -43,15 +43,15 @@ scenario LookUpEnumAfterRange
 
 
 
-function SimpleLookUpEnumFunction
+function LookUpEnumFunction
   parameters
     TableEnum Value
   results
     string Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultString)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultString)
 
 scenario LookUpString
-  function SimpleLookUpEnumFunction
+  function LookUpEnumFunction
   parameters
     Value = TableEnum.B
   results
@@ -59,15 +59,15 @@ scenario LookUpString
 
 
 
-function SimpleLookUpBooleanFunction
+function LookUpBooleanFunction
   parameters
     TableEnum Value
   results
     boolean Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultBoolean)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultBoolean)
 
 scenario LookUpBoolean
-  function SimpleLookUpBooleanFunction
+  function LookUpBooleanFunction
   parameters
     Value = TableEnum.B
   results
@@ -76,15 +76,96 @@ scenario LookUpBoolean
 
 
 
-function SimpleLookUpDateFunction
+function LookUpDateFunction
   parameters
     TableEnum Value
   results
     date Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultDate)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultDate)
 
 scenario LookUpDate
-  function SimpleLookUpDateFunction
+  function LookUpDateFunction
+  parameters
+    Value = TableEnum.B
+  results
+    Result = d"2024-12-24T23:33:33"
+
+
+
+
+
+function LookUpDefaultColumnNumberFunction
+  parameters
+    TableEnum Value
+  results
+    number Result
+  Result = StringTable.LookUp(Value, StringTable.ResultNumber)
+
+scenario LookUpDefaultColumnNumber
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = TableEnum.B
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnNumberWithDecimal
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = TableEnum.CA
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnEnumAfterRange
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = TableEnum.E
+  results
+    Result = 555
+
+
+
+function LookUpDefaultColumnEnumFunction
+  parameters
+    TableEnum Value
+  results
+    string Result
+  Result = StringTable.LookUp(Value, StringTable.ResultString)
+
+scenario LookUpDefaultColumnString
+  function LookUpDefaultColumnEnumFunction
+  parameters
+    Value = TableEnum.B
+  results
+    Result = "333"
+
+
+
+function LookUpDefaultColumnBooleanFunction
+  parameters
+    TableEnum Value
+  results
+    boolean Result
+  Result = StringTable.LookUp(Value, StringTable.ResultBoolean)
+
+scenario LookUpDefaultColumnBoolean
+  function LookUpDefaultColumnBooleanFunction
+  parameters
+    Value = TableEnum.B
+  results
+    Result = true
+
+
+
+
+function LookUpDefaultColumnDateFunction
+  parameters
+    TableEnum Value
+  results
+    date Result
+  Result = StringTable.LookUp(Value, StringTable.ResultDate)
+
+scenario LookUpDefaultColumnDate
+  function LookUpDefaultColumnDateFunction
   parameters
     Value = TableEnum.B
   results

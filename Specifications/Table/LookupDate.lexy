@@ -5,29 +5,29 @@ table DateTable
   | d"2024-12-25T11:33:33" | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
   | d"2024-12-25T11:44:44" | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     date Value
   results
     number Result
-  Result = lookUp(DateTable, Value, DateTable.SearchValue, DateTable.ResultNumber)
+  Result = DateTable.LookUp(Value, DateTable.SearchValue, DateTable.ResultNumber)
 
 scenario LookUpNumber
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = d"2024-12-25T11:22:22"
   results
     Result = 333
 
 scenario LookUpNumberWithDecimal
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = d"2024-12-25T11:36:33"
   results
     Result = 444
 
 scenario LookUpNumberAfterRange
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = d"2024-12-25T11:55:55"
   results
@@ -35,15 +35,15 @@ scenario LookUpNumberAfterRange
 
 
 
-function SimpleLookUpStringFunction
+function LookUpStringFunction
   parameters
     date Value
   results
     string Result
-  Result = lookUp(DateTable, Value, DateTable.SearchValue, DateTable.ResultString)
+  Result = DateTable.LookUp(Value, DateTable.SearchValue, DateTable.ResultString)
 
 scenario LookUpString
-  function SimpleLookUpStringFunction
+  function LookUpStringFunction
   parameters
     Value = d"2024-12-25T11:22:22"
   results
@@ -51,15 +51,15 @@ scenario LookUpString
 
 
 
-function SimpleLookUpBooleanFunction
+function LookUpBooleanFunction
   parameters
     date Value
   results
     boolean Result
-  Result = lookUp(DateTable, Value, DateTable.SearchValue, DateTable.ResultBoolean)
+  Result = DateTable.LookUp(Value, DateTable.SearchValue, DateTable.ResultBoolean)
 
 scenario LookUpBoolean
-  function SimpleLookUpBooleanFunction
+  function LookUpBooleanFunction
   parameters
     Value = d"2024-12-25T11:22:22"
   results
@@ -68,15 +68,96 @@ scenario LookUpBoolean
 
 
 
-function SimpleLookUpDateFunction
+function LookUpDateFunction
   parameters
     date Value
   results
     date Result
-  Result = lookUp(DateTable, Value, DateTable.SearchValue, DateTable.ResultDate)
+  Result = DateTable.LookUp(Value, DateTable.SearchValue, DateTable.ResultDate)
 
 scenario LookUpDate
-  function SimpleLookUpDateFunction
+  function LookUpDateFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = d"2024-12-24T23:33:33"
+
+
+
+
+
+function LookUpDefaultColumnNumberFunction
+  parameters
+    date Value
+  results
+    number Result
+  Result = DateTable.LookUp(Value, DateTable.ResultNumber)
+
+scenario LookUpDefaultColumnNumber
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnNumberWithDecimal
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = d"2024-12-25T11:36:33"
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnNumberAfterRange
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = d"2024-12-25T11:55:55"
+  results
+    Result = 555
+
+
+
+function LookUpDefaultColumnStringFunction
+  parameters
+    date Value
+  results
+    string Result
+  Result = DateTable.LookUp(Value, DateTable.ResultString)
+
+scenario LookUpDefaultColumnString
+  function LookUpDefaultColumnStringFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = "333"
+
+
+
+function LookUpDefaultColumnBooleanFunction
+  parameters
+    date Value
+  results
+    boolean Result
+  Result = DateTable.LookUp(Value, DateTable.ResultBoolean)
+
+scenario LookUpDefaultColumnBoolean
+  function LookUpDefaultColumnBooleanFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = true
+
+
+
+
+function LookUpDefaultColumnDateFunction
+  parameters
+    date Value
+  results
+    date Result
+  Result = DateTable.LookUp(Value, DateTable.ResultDate)
+
+scenario LookUpDefaultColumnDate
+  function LookUpDefaultColumnDateFunction
   parameters
     Value = d"2024-12-25T11:22:22"
   results

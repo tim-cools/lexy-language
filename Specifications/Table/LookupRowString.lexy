@@ -5,30 +5,30 @@ table StringTable
   | "c"                | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
   | "d"                | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     string Value
   results
     number Result
-  var row = lookUpRow(StringTable, Value, StringTable.SearchValue)
+  var row = StringTable.LookUpRow(Value, StringTable.SearchValue)
   Result = row.ResultNumber
 
 scenario LookUpNumber
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "b"
   results
     Result = 333
 
 scenario LookUpNumberWithDecimal
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "ca"
   results
     Result = 444
 
 scenario LookUpNumberAfterRange
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "e"
   results
@@ -36,16 +36,16 @@ scenario LookUpNumberAfterRange
 
 
 
-function SimpleLookUpStringFunction
+function LookUpStringFunction
   parameters
     string Value
   results
     string Result
-  var row = lookUpRow(StringTable, Value, StringTable.SearchValue)
+  var row = StringTable.LookUpRow(Value, StringTable.SearchValue)
   Result = row.ResultString
 
 scenario LookUpString
-  function SimpleLookUpStringFunction
+  function LookUpStringFunction
   parameters
     Value = "b"
   results
@@ -53,16 +53,16 @@ scenario LookUpString
 
 
 
-function SimpleLookUpBooleanFunction
+function LookUpBooleanFunction
   parameters
     string Value
   results
     boolean Result
-  var row = lookUpRow(StringTable, Value, StringTable.SearchValue)
+  var row = StringTable.LookUpRow(Value, StringTable.SearchValue)
   Result = row.ResultBoolean
 
 scenario LookUpBoolean
-  function SimpleLookUpBooleanFunction
+  function LookUpBooleanFunction
   parameters
     Value = "b"
   results
@@ -71,18 +71,103 @@ scenario LookUpBoolean
 
 
 
-function SimpleLookUpDateFunction
+function LookUpDateFunction
   parameters
     string Value
   results
     date Result
-  var row = lookUpRow(StringTable, Value, StringTable.SearchValue)
+  var row = StringTable.LookUpRow(Value, StringTable.SearchValue)
   Result = row.ResultDate
 
 scenario LookUpDate
-  function SimpleLookUpDateFunction
+  function LookUpDateFunction
   parameters
     Value = "b"
   results
     Result = d"2024-12-24T23:33:33"
 
+
+
+
+
+
+function LookUpDefaultColumnNumberFunction
+  parameters
+    string Value
+  results
+    number Result
+  var row = StringTable.LookUpRow(Value)
+  Result = row.ResultNumber
+
+scenario LookUpDefaultColumnNumber
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "b"
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnNumberWithDecimal
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "ca"
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnNumberAfterRange
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "e"
+  results
+    Result = 555
+
+
+
+function LookUpDefaultColumnStringFunction
+  parameters
+    string Value
+  results
+    string Result
+  var row = StringTable.LookUpRow(Value)
+  Result = row.ResultString
+
+scenario LookUpDefaultColumnString
+  function LookUpDefaultColumnStringFunction
+  parameters
+    Value = "b"
+  results
+    Result = "333"
+
+
+
+function LookUpDefaultColumnBooleanFunction
+  parameters
+    string Value
+  results
+    boolean Result
+  var row = StringTable.LookUpRow(Value)
+  Result = row.ResultBoolean
+
+scenario LookUpDefaultColumnBoolean
+  function LookUpDefaultColumnBooleanFunction
+  parameters
+    Value = "b"
+  results
+    Result = true
+
+
+
+
+function LookUpDefaultColumnDateFunction
+  parameters
+    string Value
+  results
+    date Result
+  var row = StringTable.LookUpRow(Value)
+  Result = row.ResultDate
+
+scenario LookUpDefaultColumnDate
+  function LookUpDefaultColumnDateFunction
+  parameters
+    Value = "b"
+  results
+    Result = d"2024-12-24T23:33:33"

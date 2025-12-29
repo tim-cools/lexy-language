@@ -5,29 +5,29 @@ table StringTable
   | "c"                | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
   | "d"                | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     string Value
   results
     number Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultNumber)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultNumber)
 
 scenario LookUpNumber
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "b"
   results
     Result = 333
 
 scenario LookUpNumberWithDecimal
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "ca"
   results
     Result = 444
 
 scenario LookUpNumberAfterRange
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = "e"
   results
@@ -35,15 +35,15 @@ scenario LookUpNumberAfterRange
 
 
 
-function SimpleLookUpStringFunction
+function LookUpStringFunction
   parameters
     string Value
   results
     string Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultString)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultString)
 
 scenario LookUpString
-  function SimpleLookUpStringFunction
+  function LookUpStringFunction
   parameters
     Value = "b"
   results
@@ -51,15 +51,15 @@ scenario LookUpString
 
 
 
-function SimpleLookUpBooleanFunction
+function LookUpBooleanFunction
   parameters
     string Value
   results
     boolean Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultBoolean)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultBoolean)
 
 scenario LookUpBoolean
-  function SimpleLookUpBooleanFunction
+  function LookUpBooleanFunction
   parameters
     Value = "b"
   results
@@ -68,15 +68,97 @@ scenario LookUpBoolean
 
 
 
-function SimpleLookUpDateFunction
+function LookUpDateFunction
   parameters
     string Value
   results
     date Result
-  Result = lookUp(StringTable, Value, StringTable.SearchValue, StringTable.ResultDate)
+  Result = StringTable.LookUp(Value, StringTable.SearchValue, StringTable.ResultDate)
 
 scenario LookUpDate
-  function SimpleLookUpDateFunction
+  function LookUpDateFunction
+  parameters
+    Value = "b"
+  results
+    Result = d"2024-12-24T23:33:33"
+
+
+
+
+
+
+function LookUpDefaultColumnNumberFunction
+  parameters
+    string Value
+  results
+    number Result
+  Result = StringTable.LookUp(Value, StringTable.ResultNumber)
+
+scenario LookUpDefaultColumnNumber
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "b"
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnNumberWithDecimal
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "ca"
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnNumberAfterRange
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = "e"
+  results
+    Result = 555
+
+
+
+function LookUpDefaultColumnStringFunction
+  parameters
+    string Value
+  results
+    string Result
+  Result = StringTable.LookUp(Value, StringTable.ResultString)
+
+scenario LookUpDefaultColumnString
+  function LookUpDefaultColumnStringFunction
+  parameters
+    Value = "b"
+  results
+    Result = "333"
+
+
+
+function LookUpDefaultColumnBooleanFunction
+  parameters
+    string Value
+  results
+    boolean Result
+  Result = StringTable.LookUp(Value, StringTable.ResultBoolean)
+
+scenario LookUpDefaultColumnBoolean
+  function LookUpDefaultColumnBooleanFunction
+  parameters
+    Value = "b"
+  results
+    Result = true
+
+
+
+
+function LookUpDefaultColumnDateFunction
+  parameters
+    string Value
+  results
+    date Result
+  Result = StringTable.LookUp(Value, StringTable.ResultDate)
+
+scenario LookUpDefaultColumnDate
+  function LookUpDefaultColumnDateFunction
   parameters
     Value = "b"
   results

@@ -4,7 +4,7 @@ Tables store rows of values in a specific format. The column names and types are
 
 # Table Syntax
 
-- A pipe is used te separate columns in a table `|`
+- A pipe is used to separate columns in a table `|`
 - A table header starts and ends and with a separator, and puts a separator in between each column. Each column definition starts with the type followed by the name of the column.  Only primitive types and enums are supported: boolean, string, number, date and custom defined enums.
 - A table row starts and ends and with a separator, and puts a separator in between each column. Each column contains the specific value.
 
@@ -22,9 +22,9 @@ table AverageTaxPerCanton
 
 ## Table Functions
 
-A value or a row can be looked up by using the built-in `lookUp` or the `lookUpRow` function.
-- The `lookUp`function returns a specific value from the `resultColumn` column.
-- The `lookUpRow`function returns the whole row.
+A value or a row can be looked up by using the `Table.LookUp` or the `Table.LookUpRow` functions.
+- The `LookUp`function returns a specific value from the `resultColumn` column.
+- The `LookUpRow`function returns the whole row.
 
 The functions will loop over all rows in a table from the starts and will compare the value of a specific column `searchValueColumn` with the defined `lookUpValue`.
 - If the value in the column equals the `lookUpValue`, the value in the `resultColumn` or row is returned.
@@ -34,7 +34,7 @@ The functions will loop over all rows in a table from the starts and will compar
 
 Examples: [github](https://github.com/lexy-language/lexy-language/tree/main/Specifications/Table/)
 
-Syntax: `lookUp(Table, lookUpValue, Table.searchValueColumn, Table.resultColumn)`
+Syntax: `Table.lookUp(lookUpValue, Table.searchValueColumn, Table.resultColumn)`
 
 ```
 function LookupAveragteTax
@@ -45,7 +45,7 @@ function LookupAveragteTax
     number TaxRate
     number Tax
 
-  TaxRate = lookUp(AverageTaxPerCanton, Canton, AverageTaxPerCanton.Canton, AverageTaxPerCanton.AverageTax)
+  TaxRate = AverageTaxPerCanton.LookUp(Canton, AverageTaxPerCanton.Canton, AverageTaxPerCanton.AverageTax)
   Tax = Income * TaxRate
 ```
 
@@ -61,7 +61,7 @@ scenario LookupAveragteTaxExamples
     | "St. Gallen"  | 100000 | 0.2939  | 29390 |
 ```
 
-Syntax: `lookUpRow(Table, lookUpValue, Table.searchValueColumn, Table.resultColumn)`
+Syntax: `Table.LookUpRow(lookUpValue, Table.searchValueColumn, Table.resultColumn)`
 
 ```
 function LookupRowAveragteTax
@@ -72,7 +72,7 @@ function LookupRowAveragteTax
     number TaxRate
     number Tax
     
-  var row = lookUpRow(AverageTaxPerCanton, Canton, AverageTaxPerCanton.Canton)
+  var row = AverageTaxPerCanton.LookUpRow(Canton, AverageTaxPerCanton.Canton)
   TaxRate = row.AverageTax
   Tax = Income * TaxRate
 ```
@@ -107,15 +107,9 @@ table YearlyTaxRate
   | 2025        | 35000      | 0.52        |
 ```
 
-A value or a row can be looked up by discriminator using the built-in `lookUpBy` or the `lookUpRowBy` function.
-- The `lookUpBy`function returns a specific value from the `resultColumn` column.
-- The `lookUpRowBy`function returns the whole row.
+A value or a row can also be looked up by discriminator. The functions will loop over all rows in a table from the starts and, if the discriminator matched, it will compare the value of a specific column `searchValueColumn` with the defined `lookUpValue`.
 
-The functions will loop over all rows in a table from the starts and, if the discriminator matched, it will compare the value of a specific column `searchValueColumn` with the defined `lookUpValue`.
-- If the value in the column equals the `lookUpValue`, the value in the `resultColumn` or row is returned.
-- If the value in the column exceeds the `lookUpValue`, the value `resultColumn` of the previous row or the previous row is returned.
-
-Syntax: `lookUpBy(Table, discriminator, lookUpValue, Table.discriminatorColumn, Table.searchValueColumn, Table.resultColumn)`
+Syntax: `Table.LookUp(discriminator, lookUpValue, Table.discriminatorColumn, Table.searchValueColumn, Table.resultColumn)`
 
 ```
 function LookupByYearAndMax
@@ -126,7 +120,7 @@ function LookupByYearAndMax
     number TaxRate
     number Tax
 
-  TaxRate = lookUpBy(YearlyTaxRate, Year, Income, YearlyTaxRate.Year, YearlyTaxRate.Max, YearlyTaxRate.Rate)
+  TaxRate = YearlyTaxRate.LookUp(Year, Income, YearlyTaxRate.Year, YearlyTaxRate.Max, YearlyTaxRate.Rate)
   Tax = Income * TaxRate
 ```
 
@@ -146,7 +140,7 @@ scenario LookupByYearAndMaxExamples
     | 2025 | 45000  | 0.52    | 23400      |  
 ```
 
-Syntax: `lookUpRowBy(Table, discriminator, lookUpValue, Table.discriminatorColumn, Table.searchValueColumn)`
+Syntax: `Table.LookUpRow(discriminator, lookUpValue, Table.discriminatorColumn, Table.searchValueColumn)`
 
 ```
 function LookupRowByYearAndMax
@@ -157,7 +151,7 @@ function LookupRowByYearAndMax
     number TaxRate
     number Tax
 
-  var row = lookUpRowBy(YearlyTaxRate, Year, Income, YearlyTaxRate.Year, YearlyTaxRate.Max)
+  var row = YearlyTaxRate.LookUpRow(Year, Income, YearlyTaxRate.Year, YearlyTaxRate.Max)
   TaxRate = row.Rate
   Tax = Income * TaxRate
 ```

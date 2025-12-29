@@ -4,12 +4,12 @@ scenario SimpleFunctionCall
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = year(Value)
+    Result = Date.Year(Value)
   executionLogging
     log "Execute: SimpleFunctionCallFunction"
       log "Parameters"
         Value = d"2024-12-25T16:57:45"
-      log "  Result = year(Value)"
+      log "  Result = Date.Year(Value)"
         Value = d"2024-12-25T16:57:45"
         Result = 2024
       log "Results"

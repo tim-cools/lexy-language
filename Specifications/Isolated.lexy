@@ -1,0 +1,29 @@
+table DateTable
+  | date SearchValue       | number ResultNumber | string ResultString | boolean ResultBoolean | date ResultDate          |
+  | d"2024-12-25T11:11:11" | 222                 | "222"               | false                 | d"2024-12-24T23:22:22"   |
+  | d"2024-12-25T11:22:22" | 333                 | "333"               | true                  | d"2024-12-24T23:33:33"   |
+  | d"2024-12-25T11:33:33" | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
+  | d"2024-12-25T11:44:44" | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
+
+function LookUpBooleanFunction
+  parameters
+    date Value
+  results
+    boolean Result
+  Result = DateTable.LookUp(Value, DateTable.SearchValue, DateTable.ResultBoolean)
+
+scenario LookUpBoolean
+  function LookUpBooleanFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = true
+
+scenario LookUpBdoolean
+  function LookUpBooleanFunction
+  parameters
+    Value = d"2024-12-25T11:22:22"
+  results
+    Result = true
+
+

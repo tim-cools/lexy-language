@@ -5,29 +5,29 @@ table NumberTable
   | 4                  | 444                 | "444"               | false                 | d"2024-12-24T23:44:44"   |
   | 5                  | 555                 | "555"               | true                  | d"2024-12-24T23:55:55"   |
 
-function SimpleLookUpNumberFunction
+function LookUpNumberFunction
   parameters
     number Value
   results
     number Result
-  Result = lookUp(NumberTable, Value, NumberTable.SearchValue, NumberTable.ResultNumber)
+  Result = NumberTable.LookUp(Value, NumberTable.SearchValue, NumberTable.ResultNumber)
 
 scenario LookUpNumber
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = 3
   results
     Result = 333
 
 scenario LookUpNumberWithDecimal
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = 4.5
   results
     Result = 444
 
 scenario LookUpNumberAfterRange
-  function SimpleLookUpNumberFunction
+  function LookUpNumberFunction
   parameters
     Value = 100
   results
@@ -35,15 +35,15 @@ scenario LookUpNumberAfterRange
 
 
 
-function SimpleLookUpStringFunction
+function LookUpStringFunction
   parameters
     number Value
   results
     string Result
-  Result = lookUp(NumberTable, Value, NumberTable.SearchValue, NumberTable.ResultString)
+  Result = NumberTable.LookUp(Value, NumberTable.SearchValue, NumberTable.ResultString)
 
 scenario LookUpString
-  function SimpleLookUpStringFunction
+  function LookUpStringFunction
   parameters
     Value = 3
   results
@@ -51,15 +51,15 @@ scenario LookUpString
 
 
 
-function SimpleLookUpBooleanFunction
+function LookUpBooleanFunction
   parameters
     number Value
   results
     boolean Result
-  Result = lookUp(NumberTable, Value, NumberTable.SearchValue, NumberTable.ResultBoolean)
+  Result = NumberTable.LookUp(Value, NumberTable.SearchValue, NumberTable.ResultBoolean)
 
 scenario LookUpBoolean
-  function SimpleLookUpBooleanFunction
+  function LookUpBooleanFunction
   parameters
     Value = 3
   results
@@ -68,17 +68,97 @@ scenario LookUpBoolean
 
 
 
-function SimpleLookUpDateFunction
+
+function LookUpDateFunction
   parameters
     number Value
   results
     date Result
-  Result = lookUp(NumberTable, Value, NumberTable.SearchValue, NumberTable.ResultDate)
+  Result = NumberTable.LookUp(Value, NumberTable.SearchValue, NumberTable.ResultDate)
 
 scenario LookUpDate
-  function SimpleLookUpDateFunction
+  function LookUpDateFunction
   parameters
     Value = 3
   results
     Result = d"2024-12-24T23:33:33"
 
+
+
+
+function LookUpDefaultColumnNumberFunction
+  parameters
+    number Value
+  results
+    number Result
+  Result = NumberTable.LookUp(Value, NumberTable.ResultNumber)
+
+scenario LookUpDefaultColumnNumber
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = 3
+  results
+    Result = 333
+
+scenario LookUpDefaultColumnNumberWithDecimal
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = 4.5
+  results
+    Result = 444
+
+scenario LookUpDefaultColumnNumberAfterRange
+  function LookUpDefaultColumnNumberFunction
+  parameters
+    Value = 100
+  results
+    Result = 555
+
+
+
+function LookUpDefaultColumnStringFunction
+  parameters
+    number Value
+  results
+    string Result
+  Result = NumberTable.LookUp(Value, NumberTable.ResultString)
+
+scenario LookUpDefaultColumnString
+  function LookUpDefaultColumnStringFunction
+  parameters
+    Value = 3
+  results
+    Result = "333"
+
+
+
+function LookUpDefaultColumnBooleanFunction
+  parameters
+    number Value
+  results
+    boolean Result
+  Result = NumberTable.LookUp(Value, NumberTable.ResultBoolean)
+
+scenario LookUpDefaultColumnBoolean
+  function LookUpDefaultColumnBooleanFunction
+  parameters
+    Value = 3
+  results
+    Result = true
+
+
+
+
+function LookUpDefaultColumnDateFunction
+  parameters
+    number Value
+  results
+    date Result
+  Result = NumberTable.LookUp(Value, NumberTable.ResultDate)
+
+scenario LookUpDefaultColumnDate
+  function LookUpDefaultColumnDateFunction
+  parameters
+    Value = 3
+  results
+    Result = d"2024-12-24T23:33:33"

@@ -4,7 +4,7 @@ scenario Year
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = year(Value)
+    Result = Date.Year(Value)
   results
     Result = 2024
 
@@ -14,7 +14,7 @@ scenario Day
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = day(Value)
+    Result = Date.Day(Value)
   results
     Result = 25
 
@@ -24,7 +24,7 @@ scenario Month
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = month(Value)
+    Result = Date.Month(Value)
   results
     Result = 12
 
@@ -34,7 +34,7 @@ scenario Hour
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = hour(Value)
+    Result = Date.Hour(Value)
   results
     Result = 16
 
@@ -44,7 +44,7 @@ scenario Minute
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = minute(Value)
+    Result = Date.Minute(Value)
   results
     Result = 57
 
@@ -54,7 +54,7 @@ scenario Second
       date Value = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = second(Value)
+    Result = Date.Second(Value)
   results
     Result = 45
 
@@ -67,7 +67,7 @@ scenario Years
       date ValueStart = d"2024-12-20T16:57:45"
     results
       number Result
-    Result = years(ValueEnd, ValueStart)
+    Result = Date.Years(ValueEnd, ValueStart)
   results
     Result = 5
 
@@ -78,7 +78,7 @@ scenario Months
       date ValueStart = d"2024-08-20T16:57:45"
     results
       number Result
-    Result = months(ValueEnd, ValueStart)
+    Result = Date.Months(ValueEnd, ValueStart)
   results
     Result = 4
 
@@ -89,7 +89,7 @@ scenario Days
       date ValueStart = d"2024-12-20T16:57:45"
     results
       number Result
-    Result = days(ValueEnd, ValueStart)
+    Result = Date.Days(ValueEnd, ValueStart)
   results
     Result = 5
 
@@ -100,7 +100,7 @@ scenario Hours
       date ValueStart = d"2024-12-25T16:57:45"
     results
       number Result
-    Result = hours(ValueEnd, ValueStart)
+    Result = Date.Hours(ValueEnd, ValueStart)
   results
     Result = 2
 
@@ -111,7 +111,7 @@ scenario Minutes
       date ValueStart = d"2024-12-25T16:27:45"
     results
       number Result
-    Result = minutes(ValueEnd, ValueStart)
+    Result = Date.Minutes(ValueEnd, ValueStart)
   results
     Result = 30
 
@@ -122,7 +122,7 @@ scenario Seconds
       date ValueStart = d"2024-12-25T16:57:10"
     results
       number Result
-    Result = seconds(ValueEnd, ValueStart)
+    Result = Date.Seconds(ValueEnd, ValueStart)
   results
     Result = 35
 
@@ -133,7 +133,7 @@ scenario HoursFullDay
       date ValueStart = d"2024-12-24T16:57:45"
     results
       number Result
-    Result = hours(ValueEnd, ValueStart)
+    Result = Date.Hours(ValueEnd, ValueStart)
   results
     Result = 24
 
@@ -144,7 +144,7 @@ scenario MinutesFullDay
       date ValueStart = d"2024-12-24T16:57:45"
     results
       number Result
-    Result = minutes(ValueEnd, ValueStart)
+    Result = Date.Minutes(ValueEnd, ValueStart)
   results
     Result = 1440
 
@@ -155,7 +155,7 @@ scenario SecondsFullDay
       date ValueStart = d"2024-12-24T16:57:45"
     results
       number Result
-    Result = seconds(ValueEnd, ValueStart)
+    Result = Date.Seconds(ValueEnd, ValueStart)
   results
     Result = 86400
 
@@ -163,9 +163,9 @@ scenario Today
   function
     results
       number Diff
-    date first = today()
-    date second = today()
-    Diff = seconds(first, second)
+    date first = Date.Today()
+    date second = Date.Today()
+    Diff = Date.Seconds(first, second)
   results
     Diff = 0
 
@@ -173,8 +173,8 @@ scenario NowAndDiff
   function
     results
       number Diff
-    date first = now()
-    date second = now()
-    Diff = int(seconds(second, first))
+    date first = Date.Now()
+    date second = Date.Now()
+    Diff = Number.Floor(Date.Seconds(second, first))
   results
     Diff = 0
