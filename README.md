@@ -73,7 +73,7 @@ How can you help?
 - Demand governments to publish the real Tax Lax used in their system as an executable Lexy script. First step is to be fully transparent about how taxes are calculated and about which exemptions are in the code or hidden in the Tax rules.
 - Moderate the Discord or help management of the GitHub projects
 
-If you want to work on any of these, please discuss first on **Discord** so that people are not working on the same compiler for example:
+If you want to work on any of these, please discuss first on **Discord** so that people are not working on the same tax law or compiler for example:
 
 [![](https://dcbadge.limes.pink/api/server/https://discord.gg/JmzvKNWFqE)](https://discord.gg/JmzvKNWFqE)
 
